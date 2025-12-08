@@ -514,14 +514,75 @@ button {
 
 .gradient-1 {
     background: var(--gradient-pink);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient-1::before {
+    content: '✨';
+    position: absolute;
+    font-size: 3rem;
+    top: 20%;
+    left: 20%;
+    opacity: 0.5;
+}
+
+.gradient-1::after {
+    content: '🌸';
+    position: absolute;
+    font-size: 2.5rem;
+    bottom: 20%;
+    right: 20%;
+    opacity: 0.4;
 }
 
 .gradient-2 {
     background: var(--gradient-purple);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient-2::before {
+    content: '🦋';
+    position: absolute;
+    font-size: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
 }
 
 .gradient-3 {
     background: var(--gradient-mint);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient-3::before {
+    content: '☁️';
+    position: absolute;
+    font-size: 2.5rem;
+    top: 25%;
+    right: 20%;
+    opacity: 0.5;
+}
+
+.gradient-3::after {
+    content: '🌿';
+    position: absolute;
+    font-size: 2rem;
+    bottom: 25%;
+    left: 20%;
+    opacity: 0.4;
 }
 
 /* ======================
@@ -566,6 +627,28 @@ section {
    ====================== */
 .features {
     background: var(--color-bg-secondary);
+    position: relative;
+}
+
+.features::before {
+    content: '✦';
+    position: absolute;
+    font-size: 20rem;
+    top: 10%;
+    right: 5%;
+    opacity: 0.02;
+    color: var(--color-primary);
+    pointer-events: none;
+}
+
+.features::after {
+    content: '🌸';
+    position: absolute;
+    font-size: 15rem;
+    bottom: 10%;
+    left: 5%;
+    opacity: 0.02;
+    pointer-events: none;
 }
 
 .features-grid {
@@ -591,6 +674,8 @@ section {
 .feature-icon {
     font-size: 3.5rem;
     margin-bottom: var(--space-sm);
+    filter: drop-shadow(0 4px 8px rgba(255, 183, 197, 0.3));
+    animation: float 3s infinite ease-in-out;
 }
 
 .feature-card h3 {
@@ -624,6 +709,18 @@ section {
    ====================== */
 .showcase {
     background: var(--color-bg-soft);
+    position: relative;
+}
+
+.showcase::before {
+    content: '💫';
+    position: absolute;
+    font-size: 18rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.02;
+    pointer-events: none;
 }
 
 .showcase-header {
@@ -675,26 +772,140 @@ section {
 
 .template-1 {
     background: linear-gradient(135deg, #FFB7C5 20%, #FFCDB2 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.template-1::before {
+    content: '✨';
+    position: absolute;
+    font-size: 4rem;
+    top: 20%;
+    left: 15%;
+    opacity: 0.6;
+    animation: float 3s infinite ease-in-out;
+}
+
+.template-1::after {
+    content: '🌸';
+    position: absolute;
+    font-size: 3rem;
+    bottom: 15%;
+    right: 20%;
+    opacity: 0.5;
+    animation: float 4s infinite ease-in-out 1s;
 }
 
 .template-2 {
     background: linear-gradient(135deg, #C5A3FF 20%, #E0BBE4 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.template-2::before {
+    content: '🦋';
+    position: absolute;
+    font-size: 3.5rem;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    animation: float 3.5s infinite ease-in-out;
 }
 
 .template-3 {
     background: linear-gradient(135deg, #A8E6CF 20%, #B4E7CE 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.template-3::before {
+    content: '☁️';
+    position: absolute;
+    font-size: 3rem;
+    top: 25%;
+    right: 20%;
+    opacity: 0.6;
+    animation: float 4s infinite ease-in-out;
+}
+
+.template-3::after {
+    content: '🌿';
+    position: absolute;
+    font-size: 2.5rem;
+    bottom: 20%;
+    left: 15%;
+    opacity: 0.4;
+    animation: float 3s infinite ease-in-out 1.5s;
 }
 
 .template-4 {
     background: linear-gradient(135deg, #FFD4A3 20%, #FFF4A3 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.template-4::before {
+    content: '⭐';
+    position: absolute;
+    font-size: 3.5rem;
+    top: 20%;
+    left: 20%;
+    opacity: 0.5;
+    animation: float 3s infinite ease-in-out;
+}
+
+.template-4::after {
+    content: '🌙';
+    position: absolute;
+    font-size: 3rem;
+    bottom: 25%;
+    right: 15%;
+    opacity: 0.6;
+    animation: float 4s infinite ease-in-out 1s;
 }
 
 .template-5 {
     background: linear-gradient(135deg, #FFCDB2 20%, #FFB7C5 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.template-5::before {
+    content: '💕';
+    position: absolute;
+    font-size: 3rem;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    animation: float 3.5s infinite ease-in-out;
 }
 
 .template-6 {
     background: linear-gradient(135deg, #E0BBE4 20%, #C5A3FF 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.template-6::before {
+    content: '🎀';
+    position: absolute;
+    font-size: 3.5rem;
+    top: 25%;
+    right: 25%;
+    opacity: 0.6;
+    animation: float 4s infinite ease-in-out;
+}
+
+.template-6::after {
+    content: '✦';
+    position: absolute;
+    font-size: 2.5rem;
+    bottom: 20%;
+    left: 20%;
+    opacity: 0.4;
+    animation: float 3s infinite ease-in-out 2s;
 }
 
 .showcase-info {
@@ -720,6 +931,27 @@ section {
    ====================== */
 .pricing {
     background: var(--color-bg-secondary);
+    position: relative;
+}
+
+.pricing::before {
+    content: '⭐';
+    position: absolute;
+    font-size: 16rem;
+    top: 20%;
+    right: 10%;
+    opacity: 0.02;
+    pointer-events: none;
+}
+
+.pricing::after {
+    content: '🎀';
+    position: absolute;
+    font-size: 14rem;
+    bottom: 15%;
+    left: 10%;
+    opacity: 0.02;
+    pointer-events: none;
 }
 
 .pricing-grid {
@@ -869,6 +1101,18 @@ section {
    ====================== */
 .community {
     background: var(--color-bg-soft);
+    position: relative;
+}
+
+.community::before {
+    content: '💕';
+    position: absolute;
+    font-size: 20rem;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    opacity: 0.02;
+    pointer-events: none;
 }
 
 .community-content {
@@ -967,6 +1211,18 @@ section {
    ====================== */
 .marketplace {
     background: var(--color-bg-secondary);
+    position: relative;
+}
+
+.marketplace::before {
+    content: '🛍️';
+    position: absolute;
+    font-size: 17rem;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    opacity: 0.02;
+    pointer-events: none;
 }
 
 .market-grid {
@@ -995,18 +1251,70 @@ section {
 
 .market-1 {
     background: var(--gradient-pink);
+    position: relative;
+    overflow: hidden;
+}
+
+.market-1::before {
+    content: '🎨';
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    animation: float 3s infinite ease-in-out;
 }
 
 .market-2 {
     background: var(--gradient-purple);
+    position: relative;
+    overflow: hidden;
+}
+
+.market-2::before {
+    content: '✦';
+    position: absolute;
+    font-size: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    animation: float 4s infinite ease-in-out;
 }
 
 .market-3 {
     background: var(--gradient-mint);
+    position: relative;
+    overflow: hidden;
+}
+
+.market-3::before {
+    content: '🌈';
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    animation: float 3.5s infinite ease-in-out;
 }
 
 .market-4 {
     background: var(--gradient-peach);
+    position: relative;
+    overflow: hidden;
+}
+
+.market-4::before {
+    content: '💫';
+    position: absolute;
+    font-size: 4.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    animation: float 4s infinite ease-in-out;
 }
 
 .market-info {
