@@ -1058,6 +1058,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .cta-box h2 {
@@ -1072,7 +1073,7 @@ section {
 }
 
 .cta-box .btn-hero {
-    margin: 0 auto;
+    display: inline-flex;
 }
 
 .cta-note {
