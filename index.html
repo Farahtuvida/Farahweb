@@ -3,41 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreAIve - Diseño Visual Potenciado con IA</title>
+    <title>CreAIve - Tu Espacio Creativo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <div class="logo-icon-container">
-                    <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M20 2 L35 12 L35 28 L20 38 L5 28 L5 12 Z" fill="url(#logoGradient)" opacity="0.2"/>
-                        <circle cx="20" cy="20" r="8" fill="url(#logoGradient)"/>
-                        <path d="M20 8 L26 16 L20 14 L14 16 Z" fill="url(#logoGradient)" opacity="0.8"/>
-                        <path d="M20 32 L26 24 L20 26 L14 24 Z" fill="url(#logoGradient)" opacity="0.8"/>
-                        <path d="M8 20 L16 14 L14 20 L16 26 Z" fill="url(#logoGradient)" opacity="0.8"/>
-                        <path d="M32 20 L24 14 L26 20 L24 26 Z" fill="url(#logoGradient)" opacity="0.8"/>
-                    </svg>
+                <div class="logo-circle">
+                    <span class="logo-sparkle">✦</span>
                 </div>
-                <span class="logo-text">CreAIve</span>
+                <span class="logo-text">Cre<span class="ai-text">AI</span>ve</span>
             </div>
             <div class="nav-links">
                 <a href="#features">Funciones</a>
                 <a href="#pricing">Planes</a>
                 <a href="#community">Comunidad</a>
-                <a href="#marketplace">Marketplace</a>
+                <a href="#marketplace">Tienda</a>
             </div>
             <div class="nav-cta">
                 <button class="btn-secondary">Iniciar Sesión</button>
@@ -48,82 +34,99 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-            <div class="noise-overlay"></div>
+        <div class="hero-decoration">
+            <div class="float-shape shape-1"></div>
+            <div class="float-shape shape-2"></div>
+            <div class="float-shape shape-3"></div>
+            <div class="float-shape shape-4"></div>
         </div>
+        
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Crea diseños
-                    <span class="gradient-text">extraordinarios</span>
-                    sin límites
-                </h1>
                 <div class="hero-badge">
-                    <span class="badge-icon">✨</span>
+                    <span class="sparkle">✨</span>
                     <span>Diseño + IA = Magia Visual</span>
                 </div>
+                
+                <h1 class="hero-title">
+                    Crea diseños que
+                    <span class="highlight-text">enamoran</span>
+                </h1>
+                
                 <p class="hero-description">
-                    La plataforma definitiva que combina diseño profesional, edición de video y generación con IA. 
-                    Todo lo que necesitas para crear contenido visual impactante.
+                    La plataforma más hermosa para crear contenido visual. 
+                    Diseña, edita y comparte con una comunidad que ama la creatividad tanto como tú.
                 </p>
+                
                 <div class="hero-cta">
                     <button class="btn-hero">
                         Empezar a Crear
-                        <span class="btn-arrow">→</span>
+                        <span class="arrow">→</span>
                     </button>
-                    <button class="btn-hero-secondary">
-                        <span class="play-icon">▶</span>
-                        Ver Demo
+                    <button class="btn-outline">
+                        <span class="play">▶</span>
+                        Ver en Acción
                     </button>
                 </div>
+                
                 <div class="hero-stats">
-                    <div class="stat">
+                    <div class="stat-item">
                         <span class="stat-number">50K+</span>
                         <span class="stat-label">Plantillas</span>
                     </div>
-                    <div class="stat">
+                    <div class="stat-item">
                         <span class="stat-number">1M+</span>
                         <span class="stat-label">Creadores</span>
                     </div>
-                    <div class="stat">
+                    <div class="stat-item">
                         <span class="stat-number">∞</span>
-                        <span class="stat-label">Posibilidades</span>
+                        <span class="stat-label">Ideas</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="mockup-container">
-                    <div class="mockup-card card-1">
-                        <div class="card-header">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                        </div>
-                        <div class="card-content">
-                            <div class="placeholder-img gradient-1"></div>
+            
+            <div class="hero-gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-card card-1">
+                        <div class="card-image aesthetic-1">
+                            <div class="card-overlay">
+                                <span class="card-icon">🌸</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="mockup-card card-2">
-                        <div class="card-header">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                        </div>
-                        <div class="card-content">
-                            <div class="placeholder-img gradient-2"></div>
+                    <div class="gallery-card card-2">
+                        <div class="card-image aesthetic-2">
+                            <div class="card-overlay">
+                                <span class="card-icon">🦋</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="mockup-card card-3">
-                        <div class="card-header">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
+                    <div class="gallery-card card-3">
+                        <div class="card-image aesthetic-3">
+                            <div class="card-overlay">
+                                <span class="card-icon">☁️</span>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <div class="placeholder-img gradient-3"></div>
+                    </div>
+                    <div class="gallery-card card-4">
+                        <div class="card-image aesthetic-4">
+                            <div class="card-overlay">
+                                <span class="card-icon">🌙</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-card card-5">
+                        <div class="card-image aesthetic-5">
+                            <div class="card-overlay">
+                                <span class="card-icon">✨</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-card card-6">
+                        <div class="card-image aesthetic-6">
+                            <div class="card-overlay">
+                                <span class="card-icon">🎀</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,95 +138,112 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Potencia Creativa</span>
-                <h2 class="section-title">Todo lo que necesitas para crear</h2>
+                <span class="section-badge">✦ Herramientas Mágicas</span>
+                <h2 class="section-title">Todo lo que necesitas en un solo lugar</h2>
                 <p class="section-description">
-                    Herramientas profesionales que antes requerían múltiples aplicaciones, ahora en un solo lugar
+                    Crea, edita y comparte sin complicaciones. Tu creatividad merece las mejores herramientas.
                 </p>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card featured">
+                <div class="feature-card">
                     <div class="feature-icon">🎨</div>
-                    <h3>Generación de Imágenes IA</h3>
-                    <p>Crea imágenes únicas desde descripciones. Elige entre estilos realistas, anime, 3D, minimalista y más.</p>
-                    <div class="feature-tags">
-                        <span class="tag">Realista</span>
-                        <span class="tag">Anime</span>
-                        <span class="tag">3D</span>
-                        <span class="tag">Aesthetic</span>
+                    <h3>Generación con IA</h3>
+                    <p>Transforma tus ideas en imágenes hermosas. Elige entre estilos aesthetic, minimalista, vintage y más.</p>
+                    <div class="feature-pills">
+                        <span class="pill">Aesthetic</span>
+                        <span class="pill">Minimalista</span>
+                        <span class="pill">Vintage</span>
                     </div>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">✏️</div>
+                    <div class="feature-icon">✨</div>
                     <h3>Editor de Diseño</h3>
-                    <p>Herramientas profesionales con ajuste automático y sugerencias inteligentes de IA.</p>
+                    <p>Diseña con facilidad. Ajuste automático, fuentes hermosas y colores perfectos.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎬</div>
-                    <h3>CreAIve Studio</h3>
-                    <p>Editor de video completo con transiciones, efectos y música generada por IA.</p>
+                    <h3>Editor de Video</h3>
+                    <p>Crea videos que brillan. Transiciones suaves, música perfecta y efectos mágicos.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Asistente IA</h3>
-                    <p>Acomodo automático, paletas de color, tipografías y mejoras instantáneas.</p>
+                    <div class="feature-icon">📱</div>
+                    <h3>Miles de Plantillas</h3>
+                    <p>Para Instagram, TikTok, YouTube y más. Siempre aesthetic, siempre perfectas.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎭</div>
-                    <h3>Plantillas Infinitas</h3>
-                    <p>Miles de plantillas para YouTube, Instagram, TikTok, presentaciones y más.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎪</div>
+                    <div class="feature-icon">💫</div>
                     <h3>Elementos Premium</h3>
-                    <p>Biblioteca gigante de iconos, fotos, elementos animados y recursos 3D.</p>
+                    <p>Stickers, ilustraciones, fotos y recursos que harán brillar tus diseños.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🪄</div>
+                    <h3>Asistente Inteligente</h3>
+                    <p>La IA que entiende tu estilo. Mejora automática, paletas perfectas y más.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- AI Tools Showcase -->
-            <div class="ai-showcase">
-                <div class="ai-showcase-content">
-                    <h3>La IA que entiende tu visión</h3>
-                    <ul class="ai-features-list">
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span>Acomodado automático inteligente</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span>Sugerencias de diseño personalizadas</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span>Combinación perfecta de colores</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span>Generación de música ambiental</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span>Mejora automática de elementos</span>
-                        </li>
-                    </ul>
+    <!-- Showcase Section -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-header">
+                <h2>Diseños que inspiran</h2>
+                <p>Explora lo que puedes crear con CreAIve</p>
+            </div>
+            
+            <div class="showcase-grid">
+                <div class="showcase-item tall">
+                    <div class="showcase-image template-1"></div>
+                    <div class="showcase-info">
+                        <span class="showcase-title">Aesthetic Posts</span>
+                        <span class="showcase-category">Instagram</span>
+                    </div>
                 </div>
-                <div class="ai-showcase-visual">
-                    <div class="ai-card">
-                        <div class="ai-prompt">
-                            <span class="prompt-label">Prompt:</span>
-                            <span class="prompt-text">"Make it aesthetic"</span>
-                        </div>
-                        <div class="ai-result">
-                            <div class="result-before">Antes</div>
-                            <div class="result-arrow">→</div>
-                            <div class="result-after">Después</div>
-                        </div>
+                
+                <div class="showcase-item">
+                    <div class="showcase-image template-2"></div>
+                    <div class="showcase-info">
+                        <span class="showcase-title">Soft Layouts</span>
+                        <span class="showcase-category">Stories</span>
+                    </div>
+                </div>
+                
+                <div class="showcase-item">
+                    <div class="showcase-image template-3"></div>
+                    <div class="showcase-info">
+                        <span class="showcase-title">Dreamy Covers</span>
+                        <span class="showcase-category">YouTube</span>
+                    </div>
+                </div>
+                
+                <div class="showcase-item tall">
+                    <div class="showcase-image template-4"></div>
+                    <div class="showcase-info">
+                        <span class="showcase-title">Pastel Feeds</span>
+                        <span class="showcase-category">TikTok</span>
+                    </div>
+                </div>
+                
+                <div class="showcase-item">
+                    <div class="showcase-image template-5"></div>
+                    <div class="showcase-info">
+                        <span class="showcase-title">Cute Graphics</span>
+                        <span class="showcase-category">Pinterest</span>
+                    </div>
+                </div>
+                
+                <div class="showcase-item">
+                    <div class="showcase-image template-6"></div>
+                    <div class="showcase-info">
+                        <span class="showcase-title">Sweet Posters</span>
+                        <span class="showcase-category">Print</span>
                     </div>
                 </div>
             </div>
@@ -234,73 +254,75 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Planes Flexibles</span>
-                <h2 class="section-title">Elige tu nivel creativo</h2>
+                <span class="section-badge">✦ Planes para Ti</span>
+                <h2 class="section-title">Elige tu plan perfecto</h2>
                 <p class="section-description">
-                    Desde principiantes hasta profesionales, tenemos el plan perfecto para ti
+                    Comienza gratis y crece con nosotros
                 </p>
             </div>
 
-            <div class="pricing-cards">
-                <!-- Free Plan -->
-                <div class="pricing-card">
-                    <div class="plan-badge">Básico</div>
-                    <h3 class="plan-name">CreAIve Basic</h3>
-                    <div class="plan-price">
-                        <span class="price">$0</span>
-                        <span class="period">/mes</span>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-header">
+                        <span class="price-badge">Básico</span>
+                        <h3>CreAIve Basic</h3>
+                        <div class="price-amount">
+                            <span class="amount">$0</span>
+                            <span class="period">/mes</span>
+                        </div>
                     </div>
-                    <p class="plan-description">Perfecto para comenzar tu viaje creativo</p>
-                    <ul class="plan-features">
+                    <p class="price-desc">Para comenzar a crear</p>
+                    <ul class="price-features">
                         <li><span class="check">✓</span> Plantillas básicas</li>
                         <li><span class="check">✓</span> Descargas limitadas</li>
-                        <li><span class="check">✓</span> IA limitada</li>
+                        <li><span class="check">✓</span> IA básica</li>
                         <li><span class="check">✓</span> Editor esencial</li>
-                        <li><span class="check">✓</span> 500MB almacenamiento</li>
+                        <li><span class="check">✓</span> 500MB espacio</li>
                     </ul>
-                    <button class="plan-button">Comenzar Gratis</button>
+                    <button class="price-btn">Empezar Gratis</button>
                 </div>
 
-                <!-- Premium Plan -->
-                <div class="pricing-card premium">
-                    <div class="plan-badge popular">Más Popular</div>
-                    <h3 class="plan-name">CreAIve Pro</h3>
-                    <div class="plan-price">
-                        <span class="price">$12</span>
-                        <span class="period">/mes</span>
+                <div class="price-card featured">
+                    <div class="popular-badge">Más Popular ⭐</div>
+                    <div class="price-header">
+                        <span class="price-badge">Pro</span>
+                        <h3>CreAIve Pro</h3>
+                        <div class="price-amount">
+                            <span class="amount">$12</span>
+                            <span class="period">/mes</span>
+                        </div>
                     </div>
-                    <p class="plan-description">Para creadores que buscan más poder</p>
-                    <ul class="plan-features">
-                        <li><span class="check">✓</span> Plantillas avanzadas</li>
+                    <p class="price-desc">Para creadores apasionados</p>
+                    <ul class="price-features">
+                        <li><span class="check">✓</span> Plantillas premium</li>
                         <li><span class="check">✓</span> Descargas ilimitadas</li>
-                        <li><span class="check">✓</span> IA mejorada</li>
+                        <li><span class="check">✓</span> IA avanzada</li>
                         <li><span class="check">✓</span> Elementos exclusivos</li>
-                        <li><span class="check">✓</span> Sonidos premium</li>
-                        <li><span class="check">✓</span> Videos más largos</li>
-                        <li><span class="check">✓</span> 50GB almacenamiento</li>
+                        <li><span class="check">✓</span> Música premium</li>
+                        <li><span class="check">✓</span> 50GB espacio</li>
                     </ul>
-                    <button class="plan-button primary">Comenzar Prueba</button>
+                    <button class="price-btn primary">Probar Gratis</button>
                 </div>
 
-                <!-- Golden Plan -->
-                <div class="pricing-card golden">
-                    <div class="plan-badge">Elite</div>
-                    <h3 class="plan-name">CreAIve Golden</h3>
-                    <div class="plan-price">
-                        <span class="price">$29</span>
-                        <span class="period">/mes</span>
+                <div class="price-card">
+                    <div class="price-header">
+                        <span class="price-badge golden">Golden</span>
+                        <h3>CreAIve Golden</h3>
+                        <div class="price-amount">
+                            <span class="amount">$29</span>
+                            <span class="period">/mes</span>
+                        </div>
                     </div>
-                    <p class="plan-description">Acceso total sin límites</p>
-                    <ul class="plan-features">
+                    <p class="price-desc">Para profesionales sin límites</p>
+                    <ul class="price-features">
                         <li><span class="check">✓</span> Todo de Pro +</li>
-                        <li><span class="check">✓</span> IA completa ilimitada</li>
+                        <li><span class="check">✓</span> IA ilimitada</li>
                         <li><span class="check">✓</span> Plantillas exclusivas</li>
-                        <li><span class="check">✓</span> Elementos 3D premium</li>
-                        <li><span class="check">✓</span> Exportación máxima calidad</li>
-                        <li><span class="check">✓</span> Almacenamiento ilimitado</li>
-                        <li><span class="check">✓</span> Soporte prioritario</li>
+                        <li><span class="check">✓</span> Elementos 3D</li>
+                        <li><span class="check">✓</span> Máxima calidad</li>
+                        <li><span class="check">✓</span> Espacio ilimitado</li>
                     </ul>
-                    <button class="plan-button golden-btn">Ir Golden</button>
+                    <button class="price-btn">Ir Golden</button>
                 </div>
             </div>
         </div>
@@ -311,56 +333,59 @@
         <div class="container">
             <div class="community-content">
                 <div class="community-text">
-                    <span class="section-badge">Comunidad CreAIve</span>
-                    <h2 class="section-title">Comparte, colabora y crece</h2>
+                    <span class="section-badge">✦ Únete a la Comunidad</span>
+                    <h2 class="section-title">Crea, comparte, inspira</h2>
                     <p class="section-description">
-                        Únete a una comunidad global de creadores. Comparte tu trabajo, inspírate con otros 
-                        y monetiza tus creaciones.
+                        Más de 1 millón de creadores compartiendo su arte. 
+                        Encuentra inspiración, colabora y crece junto a personas que aman crear.
                     </p>
+                    
                     <div class="community-features">
-                        <div class="community-feature">
-                            <div class="feature-icon-small">👥</div>
+                        <div class="comm-feature">
+                            <span class="comm-icon">💕</span>
+                            <div>
+                                <h4>Comparte tu Arte</h4>
+                                <p>Muestra tus creaciones al mundo</p>
+                            </div>
+                        </div>
+                        <div class="comm-feature">
+                            <span class="comm-icon">🌟</span>
                             <div>
                                 <h4>Conecta con Creadores</h4>
-                                <p>Sigue artistas, comenta y colabora en proyectos increíbles</p>
+                                <p>Sigue, comenta y colabora</p>
                             </div>
                         </div>
-                        <div class="community-feature">
-                            <div class="feature-icon-small">🎨</div>
-                            <div>
-                                <h4>Comparte tus Obras</h4>
-                                <p>Publica plantillas, diseños y videos para inspirar a otros</p>
-                            </div>
-                        </div>
-                        <div class="community-feature">
-                            <div class="feature-icon-small">🏆</div>
+                        <div class="comm-feature">
+                            <span class="comm-icon">🏆</span>
                             <div>
                                 <h4>Gana Reconocimiento</h4>
-                                <p>Logros, medallas y la posibilidad de ser Creador del Mes</p>
+                                <p>Logros, medallas y premios</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="community-grid">
-                    <div class="creator-card">
-                        <div class="creator-image gradient-4"></div>
-                        <div class="creator-info">
-                            <h4>@design_wizard</h4>
-                            <span class="creator-badge">✓ Verificado</span>
+                
+                <div class="community-preview">
+                    <div class="creator-grid">
+                        <div class="creator-item">
+                            <div class="creator-avatar avatar-1"></div>
+                            <span class="creator-name">@luna_dreams</span>
+                            <span class="creator-badge">✓</span>
                         </div>
-                    </div>
-                    <div class="creator-card">
-                        <div class="creator-image gradient-5"></div>
-                        <div class="creator-info">
-                            <h4>@visual_artist</h4>
-                            <span class="creator-badge">⭐ Pro</span>
+                        <div class="creator-item">
+                            <div class="creator-avatar avatar-2"></div>
+                            <span class="creator-name">@soft_aesthetics</span>
+                            <span class="creator-badge">⭐</span>
                         </div>
-                    </div>
-                    <div class="creator-card">
-                        <div class="creator-image gradient-6"></div>
-                        <div class="creator-info">
-                            <h4>@creative_soul</h4>
-                            <span class="creator-badge">👑 Golden</span>
+                        <div class="creator-item">
+                            <div class="creator-avatar avatar-3"></div>
+                            <span class="creator-name">@dreamy_art</span>
+                            <span class="creator-badge">👑</span>
+                        </div>
+                        <div class="creator-item">
+                            <div class="creator-avatar avatar-4"></div>
+                            <span class="creator-name">@pastel_vibes</span>
+                            <span class="creator-badge">✓</span>
                         </div>
                     </div>
                 </div>
@@ -372,50 +397,42 @@
     <section id="marketplace" class="marketplace">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Marketplace</span>
-                <h2 class="section-title">Monetiza tu talento</h2>
+                <span class="section-badge">✦ Marketplace</span>
+                <h2 class="section-title">Monetiza tu creatividad</h2>
                 <p class="section-description">
-                    Vende tus creaciones y gana 70% de cada venta. Tu arte merece recompensas.
+                    Vende tus diseños y gana 70% de cada venta. Tu arte tiene valor.
                 </p>
             </div>
 
-            <div class="marketplace-grid">
-                <div class="marketplace-item">
-                    <div class="item-preview gradient-7"></div>
-                    <div class="item-info">
-                        <h4>Pack de Plantillas</h4>
-                        <span class="item-price">$15</span>
+            <div class="market-grid">
+                <div class="market-item">
+                    <div class="market-image market-1"></div>
+                    <div class="market-info">
+                        <h4>Pack Aesthetic</h4>
+                        <span class="market-price">$15</span>
                     </div>
                 </div>
-                <div class="marketplace-item">
-                    <div class="item-preview gradient-8"></div>
-                    <div class="item-info">
-                        <h4>Iconos Premium</h4>
-                        <span class="item-price">$8</span>
+                <div class="market-item">
+                    <div class="market-image market-2"></div>
+                    <div class="market-info">
+                        <h4>Iconos Pasteles</h4>
+                        <span class="market-price">$8</span>
                     </div>
                 </div>
-                <div class="marketplace-item">
-                    <div class="item-preview gradient-9"></div>
-                    <div class="item-info">
-                        <h4>Wallpapers HD</h4>
-                        <span class="item-price">$5</span>
+                <div class="market-item">
+                    <div class="market-image market-3"></div>
+                    <div class="market-info">
+                        <h4>Fondos Dreamy</h4>
+                        <span class="market-price">$12</span>
                     </div>
                 </div>
-                <div class="marketplace-item">
-                    <div class="item-preview gradient-10"></div>
-                    <div class="item-info">
-                        <h4>Logos Animados</h4>
-                        <span class="item-price">$25</span>
+                <div class="market-item">
+                    <div class="market-image market-4"></div>
+                    <div class="market-info">
+                        <h4>Stickers Cute</h4>
+                        <span class="market-price">$5</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="marketplace-cta">
-                <div class="cta-content">
-                    <h3>Comienza a vender hoy</h3>
-                    <p>Tú creas, tú ganas. Es así de simple.</p>
-                </div>
-                <button class="btn-hero">Abrir Tienda</button>
             </div>
         </div>
     </section>
@@ -423,14 +440,14 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <div class="cta-box">
-                <h2>¿Listo para crear algo extraordinario?</h2>
-                <p>Únete a más de 1 millón de creadores que ya están usando CreAIve</p>
-                <button class="btn-hero">
+            <div class="cta-content">
+                <h2>¿Lista para crear algo hermoso?</h2>
+                <p>Únete a más de 1 millón de creadores</p>
+                <button class="btn-cta">
                     Comenzar Gratis
-                    <span class="btn-arrow">→</span>
+                    <span class="arrow">→</span>
                 </button>
-                <span class="cta-note">No requiere tarjeta de crédito</span>
+                <span class="cta-note">✨ Sin tarjeta de crédito</span>
             </div>
         </div>
     </section>
@@ -441,64 +458,41 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <div class="logo-icon-container">
-                            <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                                        <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M20 2 L35 12 L35 28 L20 38 L5 28 L5 12 Z" fill="url(#logoGradient2)" opacity="0.2"/>
-                                <circle cx="20" cy="20" r="8" fill="url(#logoGradient2)"/>
-                                <path d="M20 8 L26 16 L20 14 L14 16 Z" fill="url(#logoGradient2)" opacity="0.8"/>
-                                <path d="M20 32 L26 24 L20 26 L14 24 Z" fill="url(#logoGradient2)" opacity="0.8"/>
-                                <path d="M8 20 L16 14 L14 20 L16 26 Z" fill="url(#logoGradient2)" opacity="0.8"/>
-                                <path d="M32 20 L24 14 L26 20 L24 26 Z" fill="url(#logoGradient2)" opacity="0.8"/>
-                            </svg>
+                        <div class="logo-circle">
+                            <span class="logo-sparkle">✦</span>
                         </div>
-                        <span class="logo-text">CreAIve</span>
+                        <span class="logo-text">Cre<span class="ai-text">AI</span>ve</span>
                     </div>
-                    <p>Diseño visual sin límites</p>
+                    <p>Donde la creatividad cobra vida</p>
                 </div>
+                
                 <div class="footer-links">
-                    <div class="footer-column">
+                    <div class="footer-col">
                         <h4>Producto</h4>
                         <a href="#">Características</a>
                         <a href="#">Plantillas</a>
                         <a href="#">Precios</a>
-                        <a href="#">API</a>
                     </div>
-                    <div class="footer-column">
+                    <div class="footer-col">
                         <h4>Comunidad</h4>
                         <a href="#">Creadores</a>
-                        <a href="#">Marketplace</a>
-                        <a href="#">Blog</a>
                         <a href="#">Inspiración</a>
+                        <a href="#">Blog</a>
                     </div>
-                    <div class="footer-column">
-                        <h4>Recursos</h4>
+                    <div class="footer-col">
+                        <h4>Soporte</h4>
+                        <a href="#">Centro de Ayuda</a>
                         <a href="#">Tutoriales</a>
-                        <a href="#">Documentación</a>
-                        <a href="#">Soporte</a>
-                        <a href="#">Estado</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Empresa</h4>
-                        <a href="#">Sobre Nosotros</a>
-                        <a href="#">Carreras</a>
-                        <a href="#">Prensa</a>
                         <a href="#">Contacto</a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 CreAIve. Todos los derechos reservados.</p>
+                <p>© 2025 CreAIve. Hecho con 💕 para creadores.</p>
                 <div class="footer-legal">
                     <a href="#">Privacidad</a>
                     <a href="#">Términos</a>
-                    <a href="#">Cookies</a>
                 </div>
             </div>
         </div>
