@@ -3,120 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreAIve - Tu Espacio Creativo</title>
+    <title>CreAIve - Crea Diseños Increíbles</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <div class="logo-circle">
-                    <span class="logo-sparkle">✦</span>
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" fill="url(#logoGrad1)"/>
+                        <path d="M20 8L24 16L20 14L16 16L20 8Z" fill="white" opacity="0.9"/>
+                        <path d="M20 32L24 24L20 26L16 24L20 32Z" fill="white" opacity="0.9"/>
+                        <path d="M8 20L16 16L14 20L16 24L8 20Z" fill="white" opacity="0.9"/>
+                        <path d="M32 20L24 16L26 20L24 24L32 20Z" fill="white" opacity="0.9"/>
+                        <defs>
+                            <linearGradient id="logoGrad1" x1="2" y1="2" x2="38" y2="38">
+                                <stop offset="0%" stop-color="#FF6B9D"/>
+                                <stop offset="50%" stop-color="#C06FF8"/>
+                                <stop offset="100%" stop-color="#00D4FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
-                <span class="logo-text">Cre<span class="ai-text">AI</span>ve</span>
+                <span class="logo-text">Cre<span class="ai">AI</span>ve</span>
             </div>
             <div class="nav-links">
                 <a href="#features">Funciones</a>
-                <a href="#pricing">Planes</a>
+                <a href="#templates">Plantillas</a>
+                <a href="#pricing">Precios</a>
                 <a href="#community">Comunidad</a>
-                <a href="#marketplace">Tienda</a>
             </div>
             <div class="nav-cta">
-                <button class="btn-secondary">Iniciar Sesión</button>
-                <button class="btn-primary">Comenzar Gratis</button>
+                <button class="btn-ghost">Iniciar Sesión</button>
+                <button class="btn-primary">Empezar Gratis</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-decoration">
-            <div class="float-shape shape-1"></div>
-            <div class="float-shape shape-2"></div>
-            <div class="float-shape shape-3"></div>
-            <div class="float-shape shape-4"></div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
         
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="sparkle">✨</span>
-                    <span>Diseño + IA = Magia Visual</span>
+                <div class="badge-animated">
+                    <span class="badge-dot"></span>
+                    <span>Diseño + IA = Magia Visual ✨</span>
                 </div>
                 
                 <h1 class="hero-title">
-                    Crea diseños que
-                    <span class="highlight-text">enamoran</span>
+                    Crea contenido
+                    <span class="gradient-text">espectacular</span>
+                    en minutos
                 </h1>
                 
-                <p class="hero-description">
-                    La plataforma más hermosa para crear contenido visual. 
-                    Diseña, edita y comparte con una comunidad que ama la creatividad tanto como tú.
+                <p class="hero-subtitle">
+                    La plataforma todo-en-uno para diseñadores, creadores de contenido y equipos creativos. 
+                    Diseña, edita y comparte sin límites.
                 </p>
                 
-                <div class="hero-cta">
-                    <button class="btn-hero">
-                        Empezar a Crear
-                        <span class="arrow">→</span>
+                <div class="hero-buttons">
+                    <button class="btn-hero-main">
+                        <span>Comenzar Gratis</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </button>
-                    <button class="btn-outline">
-                        <span class="play">▶</span>
-                        Ver en Acción
+                    <button class="btn-hero-outline">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M6.5 5.5L13.5 10L6.5 14.5V5.5Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ver Demo</span>
                     </button>
                 </div>
                 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Plantillas</span>
+                <div class="social-proof">
+                    <div class="avatars">
+                        <div class="avatar" style="background: linear-gradient(135deg, #FF6B9D, #FFA07A);"></div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #C06FF8, #9D50E8);"></div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #00D4FF, #00B8D4);"></div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #FFD93D, #FFA500);"></div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">1M+</span>
-                        <span class="stat-label">Creadores</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">∞</span>
-                        <span class="stat-label">Ideas</span>
+                    <div class="social-text">
+                        <strong>+1M creadores</strong>
+                        <span>crean con CreAIve</span>
                     </div>
                 </div>
             </div>
             
             <div class="hero-visual">
-                <div class="mockup-container">
-                    <div class="mockup-card card-1">
-                        <div class="card-header">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
+                <div class="visual-card main-card">
+                    <div class="card-toolbar">
+                        <div class="tool-dots">
+                            <span></span><span></span><span></span>
                         </div>
-                        <div class="card-content">
-                            <div class="placeholder-img gradient-1"></div>
-                        </div>
-                    </div>
-                    <div class="mockup-card card-2">
-                        <div class="card-header">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                        </div>
-                        <div class="card-content">
-                            <div class="placeholder-img gradient-2"></div>
+                        <div class="tool-actions">
+                            <div class="tool-icon">✨</div>
+                            <div class="tool-icon">🎨</div>
+                            <div class="tool-icon">⚡</div>
                         </div>
                     </div>
-                    <div class="mockup-card card-3">
-                        <div class="card-header">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                        </div>
-                        <div class="card-content">
-                            <div class="placeholder-img gradient-3"></div>
+                    <div class="card-preview">
+                        <div class="preview-grid">
+                            <div class="preview-item p1">
+                                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                                    <rect width="200" height="200" fill="url(#grad1)"/>
+                                    <circle cx="100" cy="80" r="30" fill="white" opacity="0.3"/>
+                                    <rect x="60" y="120" width="80" height="8" rx="4" fill="white" opacity="0.4"/>
+                                    <rect x="70" y="140" width="60" height="6" rx="3" fill="white" opacity="0.3"/>
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0" y1="0" x2="200" y2="200">
+                                            <stop offset="0%" stop-color="#FF6B9D"/>
+                                            <stop offset="100%" stop-color="#FFA07A"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="preview-item p2">
+                                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                                    <rect width="200" height="200" fill="url(#grad2)"/>
+                                    <path d="M100 60 L140 100 L100 140 L60 100 Z" fill="white" opacity="0.3"/>
+                                    <circle cx="100" cy="100" r="20" fill="white" opacity="0.4"/>
+                                    <defs>
+                                        <linearGradient id="grad2" x1="0" y1="0" x2="200" y2="200">
+                                            <stop offset="0%" stop-color="#C06FF8"/>
+                                            <stop offset="100%" stop-color="#9D50E8"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="preview-item p3">
+                                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                                    <rect width="200" height="200" fill="url(#grad3)"/>
+                                    <rect x="50" y="70" width="100" height="60" rx="10" fill="white" opacity="0.3"/>
+                                    <circle cx="75" cy="100" r="8" fill="white" opacity="0.4"/>
+                                    <circle cx="125" cy="100" r="8" fill="white" opacity="0.4"/>
+                                    <defs>
+                                        <linearGradient id="grad3" x1="0" y1="0" x2="200" y2="200">
+                                            <stop offset="0%" stop-color="#00D4FF"/>
+                                            <stop offset="100%" stop-color="#00B8D4"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="preview-item p4">
+                                <svg width="100%" height="100%" viewBox="0 0 200 200">
+                                    <rect width="200" height="200" fill="url(#grad4)"/>
+                                    <polygon points="100,50 130,90 110,90 140,150 70,100 90,100" fill="white" opacity="0.4"/>
+                                    <defs>
+                                        <linearGradient id="grad4" x1="0" y1="0" x2="200" y2="200">
+                                            <stop offset="0%" stop-color="#FFD93D"/>
+                                            <stop offset="100%" stop-color="#FFA500"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="floating-element el-1">
+                    <div class="element-icon">🎨</div>
+                    <span>IA Generativa</span>
+                </div>
+                <div class="floating-element el-2">
+                    <div class="element-icon">⚡</div>
+                    <span>Super Rápido</span>
+                </div>
+                <div class="floating-element el-3">
+                    <div class="element-icon">✨</div>
+                    <span>Auto-Ajuste</span>
                 </div>
             </div>
         </div>
@@ -126,316 +191,314 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">✦ Herramientas Mágicas</span>
-                <h2 class="section-title">Todo lo que necesitas en un solo lugar</h2>
-                <p class="section-description">
-                    Crea, edita y comparte sin complicaciones. Tu creatividad merece las mejores herramientas.
-                </p>
+                <span class="section-tag">Herramientas Poderosas</span>
+                <h2 class="section-title">Todo lo que necesitas para crear</h2>
+                <p class="section-desc">Desde generación con IA hasta edición profesional, CreAIve tiene todo</p>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                <div class="feature-box featured-box">
+                    <div class="feature-visual">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="featGrad1" x1="0" y1="0" x2="100" y2="100">
+                                    <stop offset="0%" stop-color="#FF6B9D"/>
+                                    <stop offset="100%" stop-color="#C06FF8"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="45" fill="url(#featGrad1)" opacity="0.2"/>
+                            <path d="M30 40 Q50 20 70 40 T70 60 Q50 80 30 60 T30 40" fill="url(#featGrad1)"/>
+                            <circle cx="40" cy="45" r="4" fill="white"/>
+                            <circle cx="60" cy="45" r="4" fill="white"/>
+                        </svg>
+                    </div>
                     <h3>Generación con IA</h3>
-                    <p>Transforma tus ideas en imágenes hermosas. Elige entre estilos aesthetic, minimalista, vintage y más.</p>
-                    <div class="feature-pills">
-                        <span class="pill">Aesthetic</span>
-                        <span class="pill">Minimalista</span>
-                        <span class="pill">Vintage</span>
+                    <p>Crea imágenes increíbles desde texto. Elige tu estilo: realista, anime, 3D, ilustración y más.</p>
+                    <div class="feature-tags">
+                        <span class="ftag">Realista</span>
+                        <span class="ftag">Anime</span>
+                        <span class="ftag">3D</span>
+                        <span class="ftag">Arte</span>
                     </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">✨</div>
+                <div class="feature-box">
+                    <div class="feature-visual small">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <defs>
+                                <linearGradient id="featGrad2" x1="0" y1="0" x2="60" y2="60">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#00B8D4"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="10" y="15" width="40" height="30" rx="3" fill="url(#featGrad2)"/>
+                            <rect x="15" y="20" width="10" height="5" rx="1" fill="white" opacity="0.8"/>
+                            <rect x="15" y="30" width="20" height="2" rx="1" fill="white" opacity="0.6"/>
+                            <rect x="15" y="35" width="15" height="2" rx="1" fill="white" opacity="0.6"/>
+                        </svg>
+                    </div>
                     <h3>Editor de Diseño</h3>
-                    <p>Diseña con facilidad. Ajuste automático, fuentes hermosas y colores perfectos.</p>
+                    <p>Herramientas profesionales con IA que ajusta todo automáticamente.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎬</div>
+                <div class="feature-box">
+                    <div class="feature-visual small">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <defs>
+                                <linearGradient id="featGrad3" x1="0" y1="0" x2="60" y2="60">
+                                    <stop offset="0%" stop-color="#C06FF8"/>
+                                    <stop offset="100%" stop-color="#9D50E8"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="15" y="10" width="30" height="40" rx="3" fill="url(#featGrad3)"/>
+                            <polygon points="25,25 35,30 25,35" fill="white"/>
+                        </svg>
+                    </div>
                     <h3>Editor de Video</h3>
-                    <p>Crea videos que brillan. Transiciones suaves, música perfecta y efectos mágicos.</p>
+                    <p>Crea videos impactantes con transiciones y efectos profesionales.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Miles de Plantillas</h3>
-                    <p>Para Instagram, TikTok, YouTube y más. Siempre aesthetic, siempre perfectas.</p>
+                <div class="feature-box">
+                    <div class="feature-visual small">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <defs>
+                                <linearGradient id="featGrad4" x1="0" y1="0" x2="60" y2="60">
+                                    <stop offset="0%" stop-color="#FFD93D"/>
+                                    <stop offset="100%" stop-color="#FFA500"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="10" y="10" width="18" height="18" rx="2" fill="url(#featGrad4)" opacity="0.8"/>
+                            <rect x="32" y="10" width="18" height="18" rx="2" fill="url(#featGrad4)" opacity="0.6"/>
+                            <rect x="10" y="32" width="18" height="18" rx="2" fill="url(#featGrad4)" opacity="0.9"/>
+                            <rect x="32" y="32" width="18" height="18" rx="2" fill="url(#featGrad4)" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <h3>50,000+ Plantillas</h3>
+                    <p>Para Instagram, YouTube, TikTok, presentaciones y todo lo que imagines.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">💫</div>
-                    <h3>Elementos Premium</h3>
-                    <p>Stickers, ilustraciones, fotos y recursos que harán brillar tus diseños.</p>
+                <div class="feature-box">
+                    <div class="feature-visual small">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <defs>
+                                <linearGradient id="featGrad5" x1="0" y1="0" x2="60" y2="60">
+                                    <stop offset="0%" stop-color="#FF6B9D"/>
+                                    <stop offset="100%" stop-color="#FFA07A"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="30" cy="25" r="8" fill="url(#featGrad5)"/>
+                            <path d="M20 35 Q30 28 40 35 L40 45 L20 45 Z" fill="url(#featGrad5)"/>
+                        </svg>
+                    </div>
+                    <h3>Biblioteca Premium</h3>
+                    <p>Millones de fotos, iconos, ilustraciones y elementos 3D.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🪄</div>
-                    <h3>Asistente Inteligente</h3>
-                    <p>La IA que entiende tu estilo. Mejora automática, paletas perfectas y más.</p>
+                <div class="feature-box">
+                    <div class="feature-visual small">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <defs>
+                                <linearGradient id="featGrad6" x1="0" y1="0" x2="60" y2="60">
+                                    <stop offset="0%" stop-color="#00B8D4"/>
+                                    <stop offset="100%" stop-color="#9D50E8"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M30 10 L40 25 L30 20 L20 25 Z" fill="url(#featGrad6)"/>
+                            <path d="M30 50 L40 35 L30 40 L20 35 Z" fill="url(#featGrad6)"/>
+                            <circle cx="30" cy="30" r="8" fill="url(#featGrad6)"/>
+                        </svg>
+                    </div>
+                    <h3>IA Inteligente</h3>
+                    <p>Auto-mejora, paletas perfectas, tipografías sugeridas y más.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Showcase Section -->
-    <section class="showcase">
+    <!-- Templates Showcase -->
+    <section id="templates" class="templates">
         <div class="container">
-            <div class="showcase-header">
-                <h2>Diseños que inspiran</h2>
-                <p>Explora lo que puedes crear con CreAIve</p>
+            <div class="section-header">
+                <span class="section-tag">Inspiración Infinita</span>
+                <h2 class="section-title">Plantillas que enamoran</h2>
+                <p class="section-desc">Diseños profesionales listos para personalizar en segundos</p>
             </div>
-            
-            <div class="showcase-grid">
-                <div class="showcase-item tall">
-                    <div class="showcase-image template-1"></div>
-                    <div class="showcase-info">
-                        <span class="showcase-title">Aesthetic Posts</span>
-                        <span class="showcase-category">Instagram</span>
+
+            <div class="templates-masonry">
+                <div class="template-card tall">
+                    <div class="template-preview temp-1">
+                        <div class="temp-overlay">
+                            <button class="temp-btn">Ver Plantilla</button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h4>Post Instagram Aesthetic</h4>
+                        <span class="temp-category">Social Media</span>
                     </div>
                 </div>
-                
-                <div class="showcase-item">
-                    <div class="showcase-image template-2"></div>
-                    <div class="showcase-info">
-                        <span class="showcase-title">Soft Layouts</span>
-                        <span class="showcase-category">Stories</span>
+
+                <div class="template-card">
+                    <div class="template-preview temp-2">
+                        <div class="temp-overlay">
+                            <button class="temp-btn">Ver Plantilla</button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h4>Story Minimalista</h4>
+                        <span class="temp-category">Instagram</span>
                     </div>
                 </div>
-                
-                <div class="showcase-item">
-                    <div class="showcase-image template-3"></div>
-                    <div class="showcase-info">
-                        <span class="showcase-title">Dreamy Covers</span>
-                        <span class="showcase-category">YouTube</span>
+
+                <div class="template-card">
+                    <div class="template-preview temp-3">
+                        <div class="temp-overlay">
+                            <button class="temp-btn">Ver Plantilla</button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h4>Banner YouTube</h4>
+                        <span class="temp-category">Video</span>
                     </div>
                 </div>
-                
-                <div class="showcase-item tall">
-                    <div class="showcase-image template-4"></div>
-                    <div class="showcase-info">
-                        <span class="showcase-title">Pastel Feeds</span>
-                        <span class="showcase-category">TikTok</span>
+
+                <div class="template-card tall">
+                    <div class="template-preview temp-4">
+                        <div class="temp-overlay">
+                            <button class="temp-btn">Ver Plantilla</button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h4>Feed TikTok Vibrante</h4>
+                        <span class="temp-category">TikTok</span>
                     </div>
                 </div>
-                
-                <div class="showcase-item">
-                    <div class="showcase-image template-5"></div>
-                    <div class="showcase-info">
-                        <span class="showcase-title">Cute Graphics</span>
-                        <span class="showcase-category">Pinterest</span>
+
+                <div class="template-card">
+                    <div class="template-preview temp-5">
+                        <div class="temp-overlay">
+                            <button class="temp-btn">Ver Plantilla</button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h4>Presentación Corporativa</h4>
+                        <span class="temp-category">Business</span>
                     </div>
                 </div>
-                
-                <div class="showcase-item">
-                    <div class="showcase-image template-6"></div>
-                    <div class="showcase-info">
-                        <span class="showcase-title">Sweet Posters</span>
-                        <span class="showcase-category">Print</span>
+
+                <div class="template-card">
+                    <div class="template-preview temp-6">
+                        <div class="temp-overlay">
+                            <button class="temp-btn">Ver Plantilla</button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h4>Poster Creativo</h4>
+                        <span class="temp-category">Print</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing -->
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">✦ Planes para Ti</span>
+                <span class="section-tag">Planes Simples</span>
                 <h2 class="section-title">Elige tu plan perfecto</h2>
-                <p class="section-description">
-                    Comienza gratis y crece con nosotros
-                </p>
+                <p class="section-desc">Sin compromisos. Cancela cuando quieras.</p>
             </div>
 
-            <div class="pricing-grid">
+            <div class="pricing-cards">
                 <div class="price-card">
-                    <div class="price-header">
-                        <span class="price-badge">Básico</span>
-                        <h3>CreAIve Basic</h3>
-                        <div class="price-amount">
-                            <span class="amount">$0</span>
-                            <span class="period">/mes</span>
-                        </div>
+                    <div class="price-icon" style="background: linear-gradient(135deg, #00D4FF, #00B8D4);">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="white">
+                            <path d="M15 5L18 12L15 10L12 12L15 5Z"/>
+                            <circle cx="15" cy="15" r="4"/>
+                        </svg>
                     </div>
-                    <p class="price-desc">Para comenzar a crear</p>
-                    <ul class="price-features">
-                        <li><span class="check">✓</span> Plantillas básicas</li>
-                        <li><span class="check">✓</span> Descargas limitadas</li>
-                        <li><span class="check">✓</span> IA básica</li>
-                        <li><span class="check">✓</span> Editor esencial</li>
-                        <li><span class="check">✓</span> 500MB espacio</li>
+                    <h3>Basic</h3>
+                    <div class="price-value">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <ul class="price-list">
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg> 500+ Plantillas</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg> IA Básica</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg> 5 descargas/mes</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg> 500MB almacenamiento</li>
                     </ul>
-                    <button class="price-btn">Empezar Gratis</button>
+                    <button class="price-button">Empezar Gratis</button>
                 </div>
 
-                <div class="price-card featured">
-                    <div class="popular-badge">Más Popular ⭐</div>
-                    <div class="price-header">
-                        <span class="price-badge">Pro</span>
-                        <h3>CreAIve Pro</h3>
-                        <div class="price-amount">
-                            <span class="amount">$12</span>
-                            <span class="period">/mes</span>
-                        </div>
+                <div class="price-card popular">
+                    <div class="popular-badge">Más Popular 🔥</div>
+                    <div class="price-icon" style="background: linear-gradient(135deg, #FF6B9D, #C06FF8);">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="white">
+                            <polygon points="15,3 18,12 27,12 20,17 23,26 15,21 7,26 10,17 3,12 12,12"/>
+                        </svg>
                     </div>
-                    <p class="price-desc">Para creadores apasionados</p>
-                    <ul class="price-features">
-                        <li><span class="check">✓</span> Plantillas premium</li>
-                        <li><span class="check">✓</span> Descargas ilimitadas</li>
-                        <li><span class="check">✓</span> IA avanzada</li>
-                        <li><span class="check">✓</span> Elementos exclusivos</li>
-                        <li><span class="check">✓</span> Música premium</li>
-                        <li><span class="check">✓</span> 50GB espacio</li>
+                    <h3>Pro</h3>
+                    <div class="price-value">
+                        <span class="currency">$</span>
+                        <span class="amount">12</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <ul class="price-list">
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FF6B9D" stroke-width="2" stroke-linecap="round"/></svg> 50,000+ Plantillas</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FF6B9D" stroke-width="2" stroke-linecap="round"/></svg> IA Avanzada</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FF6B9D" stroke-width="2" stroke-linecap="round"/></svg> Descargas ilimitadas</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FF6B9D" stroke-width="2" stroke-linecap="round"/></svg> 50GB almacenamiento</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FF6B9D" stroke-width="2" stroke-linecap="round"/></svg> Música premium</li>
                     </ul>
-                    <button class="price-btn primary">Probar Gratis</button>
+                    <button class="price-button primary">Probar 14 Días Gratis</button>
                 </div>
 
                 <div class="price-card">
-                    <div class="price-header">
-                        <span class="price-badge golden">Golden</span>
-                        <h3>CreAIve Golden</h3>
-                        <div class="price-amount">
-                            <span class="amount">$29</span>
-                            <span class="period">/mes</span>
-                        </div>
+                    <div class="price-icon" style="background: linear-gradient(135deg, #FFD93D, #FFA500);">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="white">
+                            <path d="M15 3L18 10L25 11L19 16L21 23L15 19L9 23L11 16L5 11L12 10L15 3Z"/>
+                            <circle cx="15" cy="15" r="3" opacity="0.5"/>
+                        </svg>
                     </div>
-                    <p class="price-desc">Para profesionales sin límites</p>
-                    <ul class="price-features">
-                        <li><span class="check">✓</span> Todo de Pro +</li>
-                        <li><span class="check">✓</span> IA ilimitada</li>
-                        <li><span class="check">✓</span> Plantillas exclusivas</li>
-                        <li><span class="check">✓</span> Elementos 3D</li>
-                        <li><span class="check">✓</span> Máxima calidad</li>
-                        <li><span class="check">✓</span> Espacio ilimitado</li>
+                    <h3>Golden</h3>
+                    <div class="price-value">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <ul class="price-list">
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FFD93D" stroke-width="2" stroke-linecap="round"/></svg> Todo de Pro +</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FFD93D" stroke-width="2" stroke-linecap="round"/></svg> IA ilimitada</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FFD93D" stroke-width="2" stroke-linecap="round"/></svg> Elementos 3D premium</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FFD93D" stroke-width="2" stroke-linecap="round"/></svg> Almacenamiento ilimitado</li>
+                        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#FFD93D" stroke-width="2" stroke-linecap="round"/></svg> Soporte prioritario</li>
                     </ul>
-                    <button class="price-btn">Ir Golden</button>
+                    <button class="price-button">Ir Golden</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Section -->
-    <section id="community" class="community">
+    <!-- CTA Final -->
+    <section class="cta-final">
         <div class="container">
-            <div class="community-content">
-                <div class="community-text">
-                    <span class="section-badge">✦ Únete a la Comunidad</span>
-                    <h2 class="section-title">Crea, comparte, inspira</h2>
-                    <p class="section-description">
-                        Más de 1 millón de creadores compartiendo su arte. 
-                        Encuentra inspiración, colabora y crece junto a personas que aman crear.
-                    </p>
-                    
-                    <div class="community-features">
-                        <div class="comm-feature">
-                            <span class="comm-icon">💕</span>
-                            <div>
-                                <h4>Comparte tu Arte</h4>
-                                <p>Muestra tus creaciones al mundo</p>
-                            </div>
-                        </div>
-                        <div class="comm-feature">
-                            <span class="comm-icon">🌟</span>
-                            <div>
-                                <h4>Conecta con Creadores</h4>
-                                <p>Sigue, comenta y colabora</p>
-                            </div>
-                        </div>
-                        <div class="comm-feature">
-                            <span class="comm-icon">🏆</span>
-                            <div>
-                                <h4>Gana Reconocimiento</h4>
-                                <p>Logros, medallas y premios</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="cta-box">
+                <div class="cta-decoration">
+                    <div class="cta-shape cs-1"></div>
+                    <div class="cta-shape cs-2"></div>
+                    <div class="cta-shape cs-3"></div>
                 </div>
-                
-                <div class="community-preview">
-                    <div class="creator-grid">
-                        <div class="creator-item">
-                            <div class="creator-avatar avatar-1"></div>
-                            <span class="creator-name">@luna_dreams</span>
-                            <span class="creator-badge">✓</span>
-                        </div>
-                        <div class="creator-item">
-                            <div class="creator-avatar avatar-2"></div>
-                            <span class="creator-name">@soft_aesthetics</span>
-                            <span class="creator-badge">⭐</span>
-                        </div>
-                        <div class="creator-item">
-                            <div class="creator-avatar avatar-3"></div>
-                            <span class="creator-name">@dreamy_art</span>
-                            <span class="creator-badge">👑</span>
-                        </div>
-                        <div class="creator-item">
-                            <div class="creator-avatar avatar-4"></div>
-                            <span class="creator-name">@pastel_vibes</span>
-                            <span class="creator-badge">✓</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Marketplace Section -->
-    <section id="marketplace" class="marketplace">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">✦ Marketplace</span>
-                <h2 class="section-title">Monetiza tu creatividad</h2>
-                <p class="section-description">
-                    Vende tus diseños y gana 70% de cada venta. Tu arte tiene valor.
-                </p>
-            </div>
-
-            <div class="market-grid">
-                <div class="market-item">
-                    <div class="market-image market-1"></div>
-                    <div class="market-info">
-                        <h4>Pack Aesthetic</h4>
-                        <span class="market-price">$15</span>
-                    </div>
-                </div>
-                <div class="market-item">
-                    <div class="market-image market-2"></div>
-                    <div class="market-info">
-                        <h4>Iconos Pasteles</h4>
-                        <span class="market-price">$8</span>
-                    </div>
-                </div>
-                <div class="market-item">
-                    <div class="market-image market-3"></div>
-                    <div class="market-info">
-                        <h4>Fondos Dreamy</h4>
-                        <span class="market-price">$12</span>
-                    </div>
-                </div>
-                <div class="market-item">
-                    <div class="market-image market-4"></div>
-                    <div class="market-info">
-                        <h4>Stickers Cute</h4>
-                        <span class="market-price">$5</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>¿Lista para crear algo hermoso?</h2>
-                <p>Únete a más de 1 millón de creadores</p>
-                <button class="btn-cta">
-                    Comenzar Gratis
-                    <span class="arrow">→</span>
+                <h2>¿Listo para crear algo increíble?</h2>
+                <p>Únete a más de 1 millón de creadores que ya están usando CreAIve</p>
+                <button class="btn-cta-main">
+                    <span>Comenzar Gratis Ahora</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </button>
-                <span class="cta-note">✨ Sin tarjeta de crédito</span>
+                <span class="cta-note">✨ No requiere tarjeta de crédito</span>
             </div>
         </div>
     </section>
@@ -443,15 +506,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <div class="logo-circle">
-                            <span class="logo-sparkle">✦</span>
+                        <div class="logo-icon">
+                            <svg width="35" height="35" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="18" fill="url(#logoGrad2)"/>
+                                <path d="M20 8L24 16L20 14L16 16L20 8Z" fill="white" opacity="0.9"/>
+                                <path d="M20 32L24 24L20 26L16 24L20 32Z" fill="white" opacity="0.9"/>
+                                <defs>
+                                    <linearGradient id="logoGrad2">
+                                        <stop offset="0%" stop-color="#FF6B9D"/>
+                                        <stop offset="100%" stop-color="#C06FF8"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
                         </div>
-                        <span class="logo-text">Cre<span class="ai-text">AI</span>ve</span>
+                        <span class="logo-text">Cre<span class="ai">AI</span>ve</span>
                     </div>
-                    <p>Donde la creatividad cobra vida</p>
+                    <p>Creando el futuro del diseño visual</p>
                 </div>
                 
                 <div class="footer-links">
@@ -460,27 +533,31 @@
                         <a href="#">Características</a>
                         <a href="#">Plantillas</a>
                         <a href="#">Precios</a>
+                        <a href="#">API</a>
                     </div>
                     <div class="footer-col">
-                        <h4>Comunidad</h4>
-                        <a href="#">Creadores</a>
-                        <a href="#">Inspiración</a>
+                        <h4>Recursos</h4>
                         <a href="#">Blog</a>
+                        <a href="#">Tutoriales</a>
+                        <a href="#">Inspiración</a>
+                        <a href="#">Ayuda</a>
                     </div>
                     <div class="footer-col">
-                        <h4>Soporte</h4>
-                        <a href="#">Centro de Ayuda</a>
-                        <a href="#">Tutoriales</a>
+                        <h4>Empresa</h4>
+                        <a href="#">Sobre Nosotros</a>
+                        <a href="#">Carreras</a>
                         <a href="#">Contacto</a>
+                        <a href="#">Prensa</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2025 CreAIve. Hecho con 💕 para creadores.</p>
+                <p>© 2025 CreAIve. Todos los derechos reservados.</p>
                 <div class="footer-legal">
                     <a href="#">Privacidad</a>
                     <a href="#">Términos</a>
+                    <a href="#">Cookies</a>
                 </div>
             </div>
         </div>
