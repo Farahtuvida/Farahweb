@@ -13,19 +13,19 @@
     --color-butter: #FFF4A3;
     
     /* Backgrounds */
-    --color-bg: #FFF9F5;
-    --color-bg-secondary: #FFF;
-    --color-bg-soft: #FEF5F8;
-    --color-card: #FFFFFF;
+    --color-bg: #1a1625;
+    --color-bg-secondary: #221c2e;
+    --color-bg-soft: #2a2438;
+    --color-card: #2d2640;
     
     /* Text */
-    --color-text: #5A4E5C;
-    --color-text-light: #8C7A8E;
-    --color-text-soft: #B4A5B6;
+    --color-text: #f0e9f5;
+    --color-text-light: #c4b5d1;
+    --color-text-soft: #a294b3;
     
     /* Borders */
-    --color-border: #F5E6F0;
-    --color-border-soft: #FFE8F0;
+    --color-border: #3d3550;
+    --color-border-soft: #4a4060;
     
     /* Spacing */
     --space-xs: 0.5rem;
@@ -106,7 +106,7 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(26, 22, 37, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--color-border);
     padding: var(--space-sm) 0;
@@ -318,8 +318,8 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: white;
-    border: 2px solid var(--color-border-soft);
+    background: rgba(255, 183, 197, 0.1);
+    border: 2px solid rgba(255, 183, 197, 0.3);
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
     margin-bottom: var(--space-md);
@@ -385,7 +385,7 @@ button {
 }
 
 .btn-outline {
-    background: white;
+    background: var(--color-bg-card);
     color: var(--color-text);
     padding: 1.1rem 2.5rem;
     border-radius: var(--radius-md);
@@ -429,80 +429,99 @@ button {
     font-weight: 600;
 }
 
-/* Hero Gallery */
-.hero-gallery {
+/* Hero Visual - Floating Cards */
+.hero-visual {
+    position: relative;
     animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-sm);
+.mockup-container {
+    position: relative;
+    height: 500px;
 }
 
-.gallery-card {
-    position: relative;
+.mockup-card {
+    position: absolute;
+    background: var(--color-card);
+    border: 2px solid var(--color-border);
     border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
+    padding: 1rem;
+    box-shadow: var(--shadow-large);
     transition: all 0.3s ease;
 }
 
-.gallery-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-large);
+.mockup-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(255, 183, 197, 0.3);
 }
 
-.card-image {
-    width: 100%;
-    height: 200px;
-    position: relative;
+.card-1 {
+    width: 280px;
+    top: 50px;
+    left: 0;
+    z-index: 3;
+    animation: floatCard 6s infinite ease-in-out;
 }
 
-.card-1 { grid-column: span 2; grid-row: span 2; }
-.card-1 .card-image { height: 100%; }
+.card-2 {
+    width: 320px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    animation: floatCard 6s infinite ease-in-out 2s;
+}
 
-.card-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.95);
+.card-3 {
+    width: 260px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: floatCard 6s infinite ease-in-out 4s;
+}
+
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.card-header {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.gallery-card:hover .card-overlay {
-    opacity: 1;
+.card-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-border);
 }
 
-.card-icon {
-    font-size: 3rem;
+.card-content {
+    width: 100%;
 }
 
-.aesthetic-1 {
-    background: linear-gradient(135deg, #FFB7C5 0%, #FFC9D7 100%);
+.placeholder-img {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-sm);
 }
 
-.aesthetic-2 {
-    background: linear-gradient(135deg, #C5A3FF 0%, #D9C3FF 100%);
+.gradient-1 {
+    background: var(--gradient-pink);
 }
 
-.aesthetic-3 {
-    background: linear-gradient(135deg, #A8E6CF 0%, #BCE8D6 100%);
+.gradient-2 {
+    background: var(--gradient-purple);
 }
 
-.aesthetic-4 {
-    background: linear-gradient(135deg, #FFD4A3 0%, #FFE0BA 100%);
-}
-
-.aesthetic-5 {
-    background: linear-gradient(135deg, #FFCDB2 0%, #FFDDC9 100%);
-}
-
-.aesthetic-6 {
-    background: linear-gradient(135deg, #E0BBE4 0%, #EDCFEF 100%);
+.gradient-3 {
+    background: var(--gradient-mint);
 }
 
 /* ======================
@@ -519,8 +538,8 @@ section {
 
 .section-badge {
     display: inline-block;
-    background: white;
-    border: 2px solid var(--color-border-soft);
+    background: rgba(255, 183, 197, 0.1);
+    border: 2px solid rgba(255, 183, 197, 0.3);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-size: 0.9rem;
@@ -556,7 +575,7 @@ section {
 }
 
 .feature-card {
-    background: white;
+    background: var(--color-card);
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
     border: 2px solid var(--color-border);
@@ -592,8 +611,8 @@ section {
 }
 
 .pill {
-    background: var(--color-bg-soft);
-    border: 1px solid var(--color-border-soft);
+    background: rgba(255, 183, 197, 0.15);
+    border: 1px solid rgba(255, 183, 197, 0.3);
     padding: 0.35rem 1rem;
     border-radius: 50px;
     font-size: 0.85rem;
@@ -629,7 +648,7 @@ section {
 }
 
 .showcase-item {
-    background: white;
+    background: var(--color-card);
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 2px solid var(--color-border);
@@ -710,7 +729,7 @@ section {
 }
 
 .price-card {
-    background: white;
+    background: var(--color-card);
     border: 2px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: var(--space-lg);
@@ -725,7 +744,7 @@ section {
 
 .price-card.featured {
     border-color: var(--color-primary);
-    background: linear-gradient(180deg, #FFF9F5 0%, white 100%);
+    background: linear-gradient(180deg, rgba(255, 183, 197, 0.1) 0%, var(--color-card) 100%);
     transform: scale(1.05);
 }
 
@@ -759,8 +778,8 @@ section {
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: var(--space-sm);
-    background: var(--color-bg-soft);
-    border: 1px solid var(--color-border-soft);
+    background: rgba(255, 183, 197, 0.15);
+    border: 1px solid rgba(255, 183, 197, 0.3);
 }
 
 .price-badge.golden {
@@ -868,7 +887,7 @@ section {
     gap: var(--space-sm);
     margin-bottom: var(--space-md);
     padding: var(--space-sm);
-    background: white;
+    background: var(--color-card);
     border-radius: var(--radius-md);
     border: 2px solid var(--color-border);
 }
@@ -894,7 +913,7 @@ section {
 }
 
 .creator-item {
-    background: white;
+    background: var(--color-card);
     padding: var(--space-md);
     border-radius: var(--radius-lg);
     border: 2px solid var(--color-border);
@@ -912,7 +931,7 @@ section {
     height: 80px;
     border-radius: var(--radius-round);
     margin: 0 auto var(--space-sm);
-    border: 3px solid white;
+    border: 3px solid var(--color-border);
     box-shadow: var(--shadow-soft);
 }
 
@@ -957,7 +976,7 @@ section {
 }
 
 .market-item {
-    background: white;
+    background: var(--color-card);
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 2px solid var(--color-border);
@@ -1015,8 +1034,8 @@ section {
 }
 
 .cta-content {
-    background: white;
-    border: 3px solid var(--color-border-soft);
+    background: var(--color-card);
+    border: 3px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     text-align: center;
@@ -1064,7 +1083,7 @@ section {
    FOOTER
    ====================== */
 .footer {
-    background: white;
+    background: var(--color-bg-secondary);
     border-top: 2px solid var(--color-border);
     padding: var(--space-xl) 0 var(--space-md);
 }
@@ -1156,17 +1175,9 @@ section {
         justify-content: center;
     }
     
-    .hero-gallery {
+    .hero-visual {
         margin-top: var(--space-lg);
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .card-1 {
-        grid-column: span 1;
-        grid-row: span 1;
+        display: none;
     }
     
     .features-grid {
@@ -1222,9 +1233,6 @@ section {
         font-size: 0.9rem;
     }
     
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
     
     .showcase-grid {
         grid-template-columns: 1fr;
