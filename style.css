@@ -1098,7 +1098,7 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .stat-box {
