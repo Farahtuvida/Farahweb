@@ -84,13 +84,48 @@
         </nav>
 
         <div class="sidebar-footer">
-            <div class="user-profile">
+            <div class="user-profile" id="userProfileBtn">
                 <div class="user-avatar">E</div>
                 <div class="user-info">
                     <strong>Eros User</strong>
                     <span>Plan Free</span>
                 </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="dropdown-arrow">
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
             </div>
+            
+            <!-- User Dropdown Menu -->
+            <div class="user-dropdown" id="userDropdown">
+                <a href="#" class="dropdown-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 14C2 11.7909 3.79086 10 6 10H10C12.2091 10 14 11.7909 14 14" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Mi Perfil</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Configuración</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Tus Logros</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item" id="logoutBtn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 14H3C2.44772 14 2 13.5523 2 13V3C2 2.44772 2.44772 2 3 2H6M11 11L14 8M14 8L11 5M14 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+            
             <button class="upgrade-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" fill="currentColor"/>
@@ -113,14 +148,28 @@
             </div>
 
             <div class="top-bar-actions">
-                <button class="icon-btn">
+                <!-- Theme Toggle -->
+                <button class="icon-btn" id="themeToggle" title="Cambiar tema">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="sun-icon">
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.5 4.5L14 6M6 14L4.5 15.5M15.5 15.5L14 14M6 6L4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="moon-icon" style="display: none;">
+                        <path d="M18 11C16.3431 11 15 9.65685 15 8C15 6.34315 16.3431 5 18 5C16.3431 3.89543 14.3304 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C14.3304 21 16.3431 20.1046 18 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                
+                <!-- AI Generate Quick Access -->
+                <button class="icon-btn" title="Generar con IA">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M10 4C10 4 8 4 8 2C8 4 6 4 6 4C6 4 8 4 8 6C8 4 10 4 10 4Z" fill="currentColor"/>
                         <path d="M15 9C15 9 14 9 14 8C14 9 13 9 13 9C13 9 14 9 14 10C14 9 15 9 15 9Z" fill="currentColor"/>
                         <path d="M10 17V11M10 11L7 14M10 11L13 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-                <button class="icon-btn">
+                
+                <!-- Help/Chat -->
+                <button class="icon-btn" title="Ayuda">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M10 4C6.68629 4 4 6.68629 4 10C4 11.8273 4.77468 13.4735 6 14.6056V17L8.5 15.5C9 15.6667 9.48889 15.8333 10 15.8333C13.3137 15.8333 16 13.1471 16 9.83333C16 6.51962 13.3137 3.83333 10 3.83333Z" stroke="currentColor" stroke-width="1.5"/>
                         <circle cx="7.5" cy="10" r="0.75" fill="currentColor"/>
@@ -128,12 +177,57 @@
                         <circle cx="12.5" cy="10" r="0.75" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="icon-btn notification">
+                
+                <!-- Notifications -->
+                <button class="icon-btn notification" id="notificationBtn" title="Notificaciones">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M8 17H12M10 3V4M10 4C8.34315 4 7 5.34315 7 7V11L5 13H15L13 11V7C13 5.34315 11.6569 4 10 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                     <span class="notification-dot"></span>
                 </button>
+            </div>
+            
+            <!-- Notifications Panel -->
+            <div class="notifications-panel" id="notificationsPanel">
+                <div class="notifications-header">
+                    <h3>Notificaciones</h3>
+                    <button class="mark-read-btn">Marcar como leídas</button>
+                </div>
+                <div class="notifications-list">
+                    <div class="notification-item unread">
+                        <div class="notif-icon" style="background: var(--gradient-pink);">✨</div>
+                        <div class="notif-content">
+                            <strong>¡Nuevo logro desbloqueado!</strong>
+                            <p>Has creado 10 diseños este mes</p>
+                            <span class="notif-time">Hace 5 min</span>
+                        </div>
+                    </div>
+                    <div class="notification-item unread">
+                        <div class="notif-icon" style="background: var(--gradient-purple);">👥</div>
+                        <div class="notif-content">
+                            <strong>Nuevo seguidor</strong>
+                            <p>María G. comenzó a seguirte</p>
+                            <span class="notif-time">Hace 1 hora</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notif-icon" style="background: var(--gradient-cyan);">💬</div>
+                        <div class="notif-content">
+                            <strong>Nuevo comentario</strong>
+                            <p>Carlos comentó en "Brand Identity"</p>
+                            <span class="notif-time">Hace 3 horas</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notif-icon" style="background: var(--gradient-yellow);">🎨</div>
+                        <div class="notif-content">
+                            <strong>Plantilla popular</strong>
+                            <p>Tu diseño alcanzó 100 likes</p>
+                            <span class="notif-time">Ayer</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="view-all-notif">Ver todas las notificaciones →</a>
             </div>
         </header>
 
@@ -176,12 +270,30 @@
                         <strong>24</strong>
                         <span>Proyectos</span>
                     </div>
+                    <div class="stat-chart">
+                        <div class="mini-chart">
+                            <div class="chart-bar" style="height: 60%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 40%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="stat-card card-purple">
                     <div class="stat-icon">✨</div>
                     <div class="stat-content">
                         <strong>156</strong>
                         <span>Generaciones IA</span>
+                    </div>
+                    <div class="stat-chart">
+                        <div class="mini-chart">
+                            <div class="chart-bar" style="height: 50%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                            <div class="chart-bar" style="height: 85%"></div>
+                            <div class="chart-bar" style="height: 65%"></div>
+                            <div class="chart-bar" style="height: 95%"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="stat-card card-cyan">
@@ -190,12 +302,139 @@
                         <strong>2.4 GB</strong>
                         <span>Almacenamiento</span>
                     </div>
+                    <div class="storage-bar">
+                        <div class="storage-fill" style="width: 48%"></div>
+                    </div>
                 </div>
                 <div class="stat-card card-yellow">
                     <div class="stat-icon">👥</div>
                     <div class="stat-content">
                         <strong>1.2K</strong>
                         <span>Seguidores</span>
+                    </div>
+                    <div class="follower-trend">+12% ↗</div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements-section">
+                <div class="section-header">
+                    <h2>Tus Logros 🏆</h2>
+                    <a href="#" class="view-all">Ver todos →</a>
+                </div>
+                <div class="achievements-scroll">
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">🎨</div>
+                        <h4>Primer Diseño</h4>
+                        <p>Creaste tu primer proyecto</p>
+                        <div class="achievement-date">12 Dic 2024</div>
+                    </div>
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">✨</div>
+                        <h4>Maestro IA</h4>
+                        <p>100 generaciones con IA</p>
+                        <div class="achievement-date">13 Dic 2024</div>
+                    </div>
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">🔥</div>
+                        <h4>Racha de 7 días</h4>
+                        <p>Creaste algo cada día</p>
+                        <div class="achievement-date">Hoy</div>
+                    </div>
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">👑</div>
+                        <h4>Leyenda Creativa</h4>
+                        <p>Crea 100 proyectos</p>
+                        <div class="achievement-progress">24/100</div>
+                    </div>
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">💎</div>
+                        <h4>Viral</h4>
+                        <p>Alcanza 10K likes</p>
+                        <div class="achievement-progress">892/10000</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inspiration Section -->
+            <section class="inspiration-section">
+                <div class="inspiration-card">
+                    <div class="inspiration-content">
+                        <span class="inspiration-tag">💡 Inspiración del Día</span>
+                        <h3>"La creatividad es inteligencia divirtiéndose"</h3>
+                        <p>— Albert Einstein</p>
+                        <button class="inspiration-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" fill="currentColor"/>
+                            </svg>
+                            Crear algo inspirado en esto
+                        </button>
+                    </div>
+                    <div class="inspiration-visual">
+                        <div class="floating-shape shape-1"></div>
+                        <div class="floating-shape shape-2"></div>
+                        <div class="floating-shape shape-3"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trending Templates -->
+            <section class="trending-section">
+                <div class="section-header">
+                    <div>
+                        <h2>🔥 Trending esta semana</h2>
+                        <p class="section-subtitle">Las plantillas más populares del momento</p>
+                    </div>
+                    <a href="#" class="view-all">Ver todos →</a>
+                </div>
+                <div class="trending-grid">
+                    <div class="trending-card">
+                        <div class="trending-thumb" style="background: var(--gradient-pink);">
+                            <div class="trending-badge">🔥 #1</div>
+                        </div>
+                        <div class="trending-info">
+                            <strong>Aesthetic Post</strong>
+                            <div class="trending-stats">
+                                <span>❤️ 2.4K</span>
+                                <span>👁️ 12K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-thumb" style="background: var(--gradient-purple);">
+                            <div class="trending-badge">🔥 #2</div>
+                        </div>
+                        <div class="trending-info">
+                            <strong>Story Template</strong>
+                            <div class="trending-stats">
+                                <span>❤️ 1.8K</span>
+                                <span>👁️ 9K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-thumb" style="background: var(--gradient-cyan);">
+                            <div class="trending-badge">🔥 #3</div>
+                        </div>
+                        <div class="trending-info">
+                            <strong>YouTube Banner</strong>
+                            <div class="trending-stats">
+                                <span>❤️ 1.5K</span>
+                                <span>👁️ 7K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-thumb" style="background: var(--gradient-yellow);">
+                            <div class="trending-badge">⭐ Nuevo</div>
+                        </div>
+                        <div class="trending-info">
+                            <strong>Presentation Deck</strong>
+                            <div class="trending-stats">
+                                <span>❤️ 980</span>
+                                <span>👁️ 4K</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -204,10 +443,45 @@
             <section class="projects-section">
                 <div class="section-header">
                     <h2>Proyectos Recientes</h2>
-                    <a href="#" class="view-all">Ver todos →</a>
+                    <div class="section-controls">
+                        <!-- View Mode Toggle -->
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid" title="Vista Grid">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn" data-view="list" title="Vista Lista">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M5 4H14M5 8H14M5 12H14M2 4H2.5M2 8H2.5M2 12H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Filter & Sort -->
+                        <div class="filter-group">
+                            <select class="filter-select" id="projectFilter">
+                                <option value="all">Todos</option>
+                                <option value="designs">Diseños</option>
+                                <option value="videos">Videos</option>
+                                <option value="presentations">Presentaciones</option>
+                            </select>
+                            <select class="filter-select" id="projectSort">
+                                <option value="recent">Más recientes</option>
+                                <option value="oldest">Más antiguos</option>
+                                <option value="name">Nombre A-Z</option>
+                                <option value="name-desc">Nombre Z-A</option>
+                            </select>
+                        </div>
+                        
+                        <a href="#" class="view-all">Ver todos →</a>
+                    </div>
                 </div>
 
-                <div class="projects-grid">
+                <div class="projects-grid" id="projectsContainer">
                     <div class="project-card">
                         <div class="project-preview preview-1">
                             <div class="project-overlay">
@@ -314,6 +588,109 @@
             </section>
         </div>
     </main>
+
+    <!-- Mobile Hamburger Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="hamburger-icon">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="close-icon" style="display: none;">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-nav-item active">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="11" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="3" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span>Inicio</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span>IA</span>
+        </a>
+        <a href="#" class="bottom-nav-item create-btn">
+            <div class="create-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="4" y="4" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="11" y="4" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="4" y="11" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="11" y="11" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span>Plantillas</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M3 17C3 14.2386 5.23858 12 8 12H12C14.7614 12 17 14.2386 17 17" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span>Perfil</span>
+        </a>
+    </nav>
+
+    <!-- New Project Modal -->
+    <div class="modal-overlay" id="newProjectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Crear Nuevo Proyecto</h2>
+                <button class="modal-close" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="project-types">
+                    <div class="project-type-card">
+                        <div class="type-icon" style="background: var(--gradient-pink);">🎨</div>
+                        <h3>Diseño Gráfico</h3>
+                        <p>Posts, stories, banners</p>
+                    </div>
+                    <div class="project-type-card">
+                        <div class="type-icon" style="background: var(--gradient-purple);">✨</div>
+                        <h3>Generar con IA</h3>
+                        <p>Imágenes únicas con IA</p>
+                    </div>
+                    <div class="project-type-card">
+                        <div class="type-icon" style="background: var(--gradient-cyan);">🎬</div>
+                        <h3>Video</h3>
+                        <p>Edita videos y reels</p>
+                    </div>
+                    <div class="project-type-card">
+                        <div class="type-icon" style="background: var(--gradient-yellow);">📊</div>
+                        <h3>Presentación</h3>
+                        <p>Slides profesionales</p>
+                    </div>
+                </div>
+                
+                <div class="quick-sizes">
+                    <h4>Tamaños rápidos</h4>
+                    <div class="sizes-grid">
+                        <button class="size-btn">Instagram Post<span>1080x1080</span></button>
+                        <button class="size-btn">Story<span>1080x1920</span></button>
+                        <button class="size-btn">YouTube Thumbnail<span>1280x720</span></button>
+                        <button class="size-btn">Facebook Cover<span>820x312</span></button>
+                        <button class="size-btn">Logo<span>500x500</span></button>
+                        <button class="size-btn">Personalizado<span>Elige tu tamaño</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="dashboard.js"></script>
 </body>

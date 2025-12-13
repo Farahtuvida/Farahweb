@@ -1,189 +1,369 @@
 // ========================
-// DASHBOARD INTERACTIONS
+// ENHANCED DASHBOARD INTERACTIONS
 // ========================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll animations on load
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.stat-card, .project-card, .template-card');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 50);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        elements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.5s ease-out';
-            observer.observe(el);
-        });
-    };
     
-    // Initialize animations
-    animateOnScroll();
+    // ========================
+    // THEME TOGGLE
+    // ========================
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = themeToggle?.querySelector('.sun-icon');
+    const moonIcon = themeToggle?.querySelector('.moon-icon');
     
-    // Search functionality
-    const searchInput = document.querySelector('.search-bar input');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            console.log('Searching for:', query);
-            // TODO: Implement search functionality
-        });
+    // Check saved theme
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+        document.body.classList.add('light-mode');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
     }
     
-    // Quick action buttons
-    const quickButtons = document.querySelectorAll('.quick-btn');
-    quickButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const buttonText = btn.querySelector('span').textContent;
-            console.log('Quick action clicked:', buttonText);
+    themeToggle?.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        
+        sunIcon.style.display = isLight ? 'none' : 'block';
+        moonIcon.style.display = isLight ? 'block' : 'none';
+        
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+    
+    // ========================
+    // USER DROPDOWN MENU
+    // ========================
+    const userProfileBtn = document.getElementById('userProfileBtn');
+    const userDropdown = document.getElementById('userDropdown');
+    
+    userProfileBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        userProfileBtn.classList.toggle('active');
+        userDropdown.classList.toggle('active');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+        userProfileBtn?.classList.remove('active');
+        userDropdown?.classList.remove('active');
+    });
+    
+    // Logout functionality
+    document.getElementById('logoutBtn')?.addEventListener('click', async (e) => {
+        e.preventDefault();
+        
+        if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
+            // If using Supabase
+            if (window.authFunctions) {
+                await window.authFunctions.signOut();
+            } else {
+                // Redirect to login
+                window.location.href = 'login.html';
+            }
+        }
+    });
+    
+    // ========================
+    // NOTIFICATIONS PANEL
+    // ========================
+    const notificationBtn = document.getElementById('notificationBtn');
+    const notificationsPanel = document.getElementById('notificationsPanel');
+    
+    notificationBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notificationsPanel.classList.toggle('active');
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!notificationsPanel?.contains(e.target) && !notificationBtn?.contains(e.target)) {
+            notificationsPanel?.classList.remove('active');
+        }
+    });
+    
+    // Mark all as read
+    document.querySelector('.mark-read-btn')?.addEventListener('click', () => {
+        document.querySelectorAll('.notification-item').forEach(item => {
+            item.classList.remove('unread');
+        });
+    });
+    
+    // ========================
+    // MOBILE HAMBURGER MENU
+    // ========================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.querySelector('.sidebar');
+    const hamburgerIcon = mobileMenuBtn?.querySelector('.hamburger-icon');
+    const closeIcon = mobileMenuBtn?.querySelector('.close-icon');
+    
+    mobileMenuBtn?.addEventListener('click', () => {
+        sidebar.classList.toggle('mobile-active');
+        const isActive = sidebar.classList.contains('mobile-active');
+        
+        hamburgerIcon.style.display = isActive ? 'none' : 'block';
+        closeIcon.style.display = isActive ? 'block' : 'none';
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!sidebar?.contains(e.target) && !mobileMenuBtn?.contains(e.target)) {
+            sidebar?.classList.remove('mobile-active');
+            hamburgerIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+        }
+    });
+    
+    // ========================
+    // VIEW MODE TOGGLE
+    // ========================
+    const viewButtons = document.querySelectorAll('.view-btn');
+    const projectsContainer = document.getElementById('projectsContainer');
+    
+    viewButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            viewButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
             
-            // Add click effect
-            btn.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                btn.style.transform = '';
-            }, 150);
-            
-            // TODO: Navigate to appropriate page
-            if (buttonText.includes('IA')) {
-                // Navigate to AI generator
-            } else if (buttonText.includes('Diseño')) {
-                // Navigate to design editor
-            } else if (buttonText.includes('Plantillas')) {
-                // Navigate to templates
+            const view = btn.dataset.view;
+            if (view === 'list') {
+                projectsContainer?.classList.add('list-view');
+            } else {
+                projectsContainer?.classList.remove('list-view');
             }
         });
     });
     
-    // Notification button
-    const notificationBtn = document.querySelector('.icon-btn.notification');
-    if (notificationBtn) {
-        notificationBtn.addEventListener('click', () => {
-            console.log('Notifications clicked');
-            // TODO: Show notifications panel
+    // ========================
+    // FILTERS & SORTING
+    // ========================
+    const projectFilter = document.getElementById('projectFilter');
+    const projectSort = document.getElementById('projectSort');
+    
+    projectFilter?.addEventListener('change', (e) => {
+        console.log('Filter by:', e.target.value);
+        // TODO: Implement filtering logic
+        filterProjects(e.target.value);
+    });
+    
+    projectSort?.addEventListener('change', (e) => {
+        console.log('Sort by:', e.target.value);
+        // TODO: Implement sorting logic
+        sortProjects(e.target.value);
+    });
+    
+    function filterProjects(filter) {
+        // Placeholder for filter logic
+        const projects = document.querySelectorAll('.project-card:not(.new-project)');
+        projects.forEach(project => {
+            // Show/hide based on filter
+            project.style.display = 'block';
         });
     }
     
-    // Project cards interactions
-    const projectCards = document.querySelectorAll('.project-card:not(.new-project)');
-    projectCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const projectName = card.querySelector('h3').textContent;
-            console.log('Opening project:', projectName);
-            // TODO: Navigate to project editor
+    function sortProjects(sortBy) {
+        // Placeholder for sort logic
+        console.log('Sorting projects by:', sortBy);
+    }
+    
+    // ========================
+    // NEW PROJECT MODAL
+    // ========================
+    const newProjectModal = document.getElementById('newProjectModal');
+    const newProjectCards = document.querySelectorAll('.new-project, .create-btn, .create-icon');
+    const closeModal = document.getElementById('closeModal');
+    
+    newProjectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            newProjectModal.classList.add('active');
         });
     });
     
-    // New project button
-    const newProjectCard = document.querySelector('.new-project');
-    if (newProjectCard) {
-        newProjectCard.addEventListener('click', () => {
-            console.log('Creating new project');
-            // TODO: Show new project modal or navigate to editor
+    closeModal?.addEventListener('click', () => {
+        newProjectModal.classList.remove('active');
+    });
+    
+    newProjectModal?.addEventListener('click', (e) => {
+        if (e.target === newProjectModal) {
+            newProjectModal.classList.remove('active');
+        }
+    });
+    
+    // Project type selection
+    document.querySelectorAll('.project-type-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const type = card.querySelector('h3').textContent;
+            console.log('Creating project type:', type);
+            // TODO: Navigate to editor with selected type
+        });
+    });
+    
+    // Size buttons
+    document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const size = btn.textContent.split('\n')[0];
+            console.log('Creating project with size:', size);
+            // TODO: Navigate to editor with selected size
+        });
+    });
+    
+    // ========================
+    // SEARCH FUNCTIONALITY
+    // ========================
+    const searchInput = document.querySelector('.search-bar input');
+    let searchTimeout;
+    
+    searchInput?.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const query = e.target.value.toLowerCase();
+            console.log('Searching for:', query);
+            performSearch(query);
+        }, 300);
+    });
+    
+    function performSearch(query) {
+        if (!query) return;
+        
+        // Search in projects
+        const projects = document.querySelectorAll('.project-card h3');
+        projects.forEach(project => {
+            const card = project.closest('.project-card');
+            const matches = project.textContent.toLowerCase().includes(query);
+            card.style.display = matches ? 'block' : 'none';
+        });
+        
+        // Search in templates
+        const templates = document.querySelectorAll('.template-card strong');
+        templates.forEach(template => {
+            const card = template.closest('.template-card');
+            const matches = template.textContent.toLowerCase().includes(query);
+            card.style.display = matches ? 'block' : 'none';
         });
     }
     
-    // Template cards
-    const templateCards = document.querySelectorAll('.template-card');
-    templateCards.forEach(card => {
+    // ========================
+    // QUICK ACTION BUTTONS
+    // ========================
+    document.querySelectorAll('.quick-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const text = btn.querySelector('span').textContent;
+            console.log('Quick action:', text);
+            
+            if (text.includes('IA')) {
+                // TODO: Open AI generator
+                console.log('Opening AI generator');
+            } else if (text.includes('Diseño')) {
+                newProjectModal?.classList.add('active');
+            } else if (text.includes('Plantillas')) {
+                // TODO: Navigate to templates
+                console.log('Navigating to templates');
+            }
+            
+            // Click effect
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => btn.style.transform = '', 150);
+        });
+    });
+    
+    // ========================
+    // PROJECT CARDS
+    // ========================
+    document.querySelectorAll('.project-card:not(.new-project)').forEach(card => {
         card.addEventListener('click', () => {
-            const templateName = card.querySelector('strong').textContent;
-            console.log('Template selected:', templateName);
+            const name = card.querySelector('h3')?.textContent;
+            console.log('Opening project:', name);
+            // TODO: Navigate to editor
+        });
+    });
+    
+    // ========================
+    // TEMPLATE CARDS
+    // ========================
+    document.querySelectorAll('.template-card, .trending-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const name = card.querySelector('strong')?.textContent;
+            console.log('Using template:', name);
             // TODO: Open template in editor
         });
     });
     
-    // Sidebar navigation
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
+    // ========================
+    // ACHIEVEMENTS
+    // ========================
+    document.querySelectorAll('.achievement-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const achievement = card.querySelector('h4')?.textContent;
+            const isLocked = card.classList.contains('locked');
+            
+            if (isLocked) {
+                console.log('Achievement locked:', achievement);
+                // TODO: Show progress modal
+            } else {
+                console.log('Achievement unlocked:', achievement);
+                // TODO: Show achievement details
+            }
+        });
+    });
+    
+    // ========================
+    // NAVIGATION
+    // ========================
+    document.querySelectorAll('.nav-item, .bottom-nav-item').forEach(item => {
         item.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            // Remove active from all
-            navItems.forEach(nav => nav.classList.remove('active'));
-            
-            // Add active to clicked
-            item.classList.add('active');
-            
-            const navText = item.querySelector('span').textContent;
-            console.log('Navigation clicked:', navText);
-            
-            // TODO: Navigate to appropriate section
+            if (!item.classList.contains('create-btn')) {
+                e.preventDefault();
+                
+                // Update active state
+                const container = item.closest('.sidebar-nav, .bottom-nav');
+                container?.querySelectorAll('.nav-item, .bottom-nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                item.classList.add('active');
+                
+                const navText = item.querySelector('span')?.textContent;
+                console.log('Navigation:', navText);
+                // TODO: Load appropriate section
+            }
         });
     });
     
-    // Upgrade button
-    const upgradeBtn = document.querySelector('.upgrade-btn');
-    if (upgradeBtn) {
-        upgradeBtn.addEventListener('click', () => {
-            console.log('Upgrade clicked');
-            // TODO: Navigate to pricing page
-            window.location.href = 'index.html#pricing';
-        });
-    }
-    
-    // Stats card hover effects
-    const statCards = document.querySelectorAll('.stat-card');
-    statCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.borderColor = 'var(--color-purple)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.borderColor = 'var(--color-border)';
-        });
+    // ========================
+    // UPGRADE BUTTON
+    // ========================
+    document.querySelector('.upgrade-btn')?.addEventListener('click', () => {
+        console.log('Upgrade clicked');
+        window.location.href = 'index.html#pricing';
     });
     
-    // View all links
-    const viewAllLinks = document.querySelectorAll('.view-all');
-    viewAllLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const section = link.closest('section');
-            const sectionTitle = section.querySelector('h2').textContent;
-            console.log('View all clicked for:', sectionTitle);
-            // TODO: Navigate to full section view
+    // ========================
+    // ANIMATIONS ON SCROLL
+    // ========================
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 50);
+            }
         });
+    }, observerOptions);
+    
+    // Observe all cards
+    document.querySelectorAll('.stat-card, .project-card, .template-card, .trending-card, .achievement-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
     });
     
-    // Add ripple effect to buttons
-    function createRipple(event) {
-        const button = event.currentTarget;
-        const ripple = document.createElement('span');
-        const rect = button.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = event.clientX - rect.left - size / 2;
-        const y = event.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
-        
-        button.appendChild(ripple);
-        
-        setTimeout(() => {
-            ripple.remove();
-        }, 600);
-    }
-    
-    // Add ripple to all buttons
-    const allButtons = document.querySelectorAll('button, .nav-item');
-    allButtons.forEach(button => {
-        button.style.position = 'relative';
-        button.style.overflow = 'hidden';
-        button.addEventListener('click', createRipple);
-    });
-    
-    // Greeting based on time
+    // ========================
+    // DYNAMIC GREETING
+    // ========================
     const updateGreeting = () => {
         const hour = new Date().getHours();
         const welcomeH1 = document.querySelector('.welcome-text h1');
@@ -205,20 +385,131 @@ document.addEventListener('DOMContentLoaded', () => {
     
     updateGreeting();
     
-    // Check auth status (integrate with Supabase later)
+    // ========================
+    // RIPPLE EFFECT
+    // ========================
+    function createRipple(event) {
+        const button = event.currentTarget;
+        const ripple = document.createElement('span');
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = event.clientX - rect.left - size / 2;
+        const y = event.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        const oldRipple = button.querySelector('.ripple');
+        if (oldRipple) oldRipple.remove();
+        
+        button.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+    }
+    
+    // Add ripple to buttons
+    document.querySelectorAll('button, .nav-item, .bottom-nav-item').forEach(btn => {
+        btn.style.position = 'relative';
+        btn.style.overflow = 'hidden';
+        btn.addEventListener('click', createRipple);
+    });
+    
+    // ========================
+    // LOAD PROJECTS DATA
+    // ========================
+    function loadProjects() {
+        const projectsData = [
+            { name: 'Brand Identity Design', time: 'hace 2 horas', type: 'designs', preview: 'preview-1' },
+            { name: 'Instagram Stories Pack', time: 'ayer', type: 'designs', preview: 'preview-2' },
+            { name: 'YouTube Thumbnail', time: 'hace 3 días', type: 'videos', preview: 'preview-3' }
+        ];
+        
+        const container = document.getElementById('projectsContainer');
+        if (!container) return;
+        
+        container.innerHTML = projectsData.map(project => `
+            <div class="project-card" data-type="${project.type}">
+                <div class="project-preview ${project.preview}">
+                    <div class="project-overlay">
+                        <button class="preview-btn">Ver Proyecto</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>${project.name}</h3>
+                    <p>Editado ${project.time}</p>
+                </div>
+            </div>
+        `).join('') + `
+            <div class="project-card new-project">
+                <div class="project-preview new-preview">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 12V36M12 24H36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span>Nuevo Proyecto</span>
+                </div>
+            </div>
+        `;
+        
+        // Re-attach event listeners
+        container.querySelectorAll('.project-card:not(.new-project)').forEach(card => {
+            card.addEventListener('click', () => {
+                const name = card.querySelector('h3')?.textContent;
+                console.log('Opening project:', name);
+            });
+        });
+        
+        container.querySelector('.new-project')?.addEventListener('click', () => {
+            newProjectModal?.classList.add('active');
+        });
+    }
+    
+    loadProjects();
+    
+    // ========================
+    // KEYBOARD SHORTCUTS
+    // ========================
+    document.addEventListener('keydown', (e) => {
+        // Ctrl/Cmd + K for search
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            searchInput?.focus();
+        }
+        
+        // Ctrl/Cmd + N for new project
+        if ((e.ctrlKey || e.metaKey) && e.key === 'n') {
+            e.preventDefault();
+            newProjectModal?.classList.add('active');
+        }
+        
+        // ESC to close modals
+        if (e.key === 'Escape') {
+            newProjectModal?.classList.remove('active');
+            notificationsPanel?.classList.remove('active');
+            userDropdown?.classList.remove('active');
+        }
+    });
+    
+    // ========================
+    // CHECK AUTH (If using Supabase)
+    // ========================
     const checkAuth = async () => {
-        // TODO: Check if user is logged in
-        // If not, redirect to login
-        // const session = await window.authFunctions?.getCurrentSession();
-        // if (!session) {
-        //     window.location.href = 'login.html';
-        // }
+        if (window.authFunctions) {
+            const session = await window.authFunctions.getCurrentSession();
+            if (!session) {
+                window.location.href = 'login.html';
+            }
+        }
     };
     
-    checkAuth();
+    // Uncomment when Supabase is ready
+    // checkAuth();
+    
+    console.log('✨ Dashboard loaded successfully!');
 });
 
-// Add CSS for ripple effect
+// Add ripple CSS
 const style = document.createElement('style');
 style.textContent = `
     .ripple {
