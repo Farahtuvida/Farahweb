@@ -105,12 +105,12 @@ body.light-mode {
 
 /* Scrollbar para Light Mode */
 body.light-mode::-webkit-scrollbar-track {
-    background: #F5F3FF;
+    background: #FFFFFF;
 }
 
 body.light-mode::-webkit-scrollbar-thumb {
     background: #E6E1F0;
-    border: 2px solid #F5F3FF;
+    border: 2px solid #FFFFFF;
 }
 
 body.light-mode::-webkit-scrollbar-thumb:hover {
@@ -118,7 +118,19 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
 }
 
 body.light-mode * {
-    scrollbar-color: #E6E1F0 #F5F3FF;
+    scrollbar-color: #E6E1F0 #FFFFFF;
+}
+
+/* Scrollbar específico para elementos con fondo claro */
+body.light-mode .content-feed::-webkit-scrollbar-track,
+body.light-mode .main-content::-webkit-scrollbar-track {
+    background: #F5F3FF;
+}
+
+body.light-mode .content-feed::-webkit-scrollbar-thumb,
+body.light-mode .main-content::-webkit-scrollbar-thumb {
+    background: #E6E1F0;
+    border: 2px solid #F5F3FF;
 }
 
 /* ========================
