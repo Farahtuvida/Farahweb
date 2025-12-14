@@ -146,15 +146,19 @@ function addGeneratedTemplate(prompt, gradient, index, total) {
     templateCard.className = 'template-card';
     templateCard.innerHTML = `
         <div class="template-preview" style="background: ${gradient};">
-            <div class="template-badge">${typeInfo.icon} Variación ${index}/${total}</div>
+            <div class="template-badge">${typeInfo.icon} ${index}/${total}</div>
+            <div class="template-overlay">
+                <button class="overlay-btn btn-edit" onclick="editTemplate(this)">
+                    ✏️ Editar
+                </button>
+                <button class="overlay-btn btn-download" onclick="downloadTemplate(this)">
+                    ⬇️ Descargar
+                </button>
+            </div>
         </div>
         <div class="template-info">
             <h4>${typeInfo.name}</h4>
             <p class="template-meta">${typeInfo.size} • Generado con IA</p>
-            <div class="template-actions">
-                <button onclick="editTemplate(this)">✏️ Editar</button>
-                <button onclick="downloadTemplate(this)">⬇️ Descargar</button>
-            </div>
         </div>
     `;
     
