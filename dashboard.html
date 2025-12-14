@@ -95,7 +95,6 @@
                 </svg>
             </div>
             
-            <!-- User Dropdown Menu -->
             <div class="user-dropdown" id="userDropdown">
                 <a href="#" class="dropdown-item">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -110,12 +109,6 @@
                         <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                     <span>Configuración</span>
-                </a>
-                <a href="#" class="dropdown-item">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
-                    <span>Tus Logros</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item" id="logoutBtn">
@@ -144,11 +137,10 @@
                     <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/>
                     <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
-                <input type="text" placeholder="Buscar plantillas, proyectos...">
+                <input type="text" placeholder="Buscar plantillas, diseños, creadores...">
             </div>
 
             <div class="top-bar-actions">
-                <!-- Theme Toggle -->
                 <button class="icon-btn" id="themeToggle" title="Cambiar tema">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="sun-icon">
                         <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
@@ -159,922 +151,122 @@
                     </svg>
                 </button>
                 
-                <!-- AI Generate Quick Access -->
-                <button class="icon-btn" title="Generar con IA">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 4C10 4 8 4 8 2C8 4 6 4 6 4C6 4 8 4 8 6C8 4 10 4 10 4Z" fill="currentColor"/>
-                        <path d="M15 9C15 9 14 9 14 8C14 9 13 9 13 9C13 9 14 9 14 10C14 9 15 9 15 9Z" fill="currentColor"/>
-                        <path d="M10 17V11M10 11L7 14M10 11L13 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                
-                <!-- Help/Chat -->
-                <button class="icon-btn" title="Ayuda">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 4C6.68629 4 4 6.68629 4 10C4 11.8273 4.77468 13.4735 6 14.6056V17L8.5 15.5C9 15.6667 9.48889 15.8333 10 15.8333C13.3137 15.8333 16 13.1471 16 9.83333C16 6.51962 13.3137 3.83333 10 3.83333Z" stroke="currentColor" stroke-width="1.5"/>
-                        <circle cx="7.5" cy="10" r="0.75" fill="currentColor"/>
-                        <circle cx="10" cy="10" r="0.75" fill="currentColor"/>
-                        <circle cx="12.5" cy="10" r="0.75" fill="currentColor"/>
-                    </svg>
-                </button>
-                
-                <!-- Notifications -->
-                <button class="icon-btn notification" id="notificationBtn" title="Notificaciones">
+                <button class="icon-btn" id="notificationBtn" title="Notificaciones">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M8 17H12M10 3V4M10 4C8.34315 4 7 5.34315 7 7V11L5 13H15L13 11V7C13 5.34315 11.6569 4 10 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                     <span class="notification-dot"></span>
                 </button>
-            </div>
-            
-            <!-- Notifications Panel -->
-            <div class="notifications-panel" id="notificationsPanel">
-                <div class="notifications-header">
-                    <h3>Notificaciones</h3>
-                    <button class="mark-read-btn">Marcar como leídas</button>
-                </div>
-                <div class="notifications-list">
-                    <div class="notification-item unread">
-                        <div class="notif-icon" style="background: var(--gradient-pink);">✨</div>
-                        <div class="notif-content">
-                            <strong>¡Nuevo logro desbloqueado!</strong>
-                            <p>Has creado 10 diseños este mes</p>
-                            <span class="notif-time">Hace 5 min</span>
-                        </div>
-                    </div>
-                    <div class="notification-item unread">
-                        <div class="notif-icon" style="background: var(--gradient-purple);">👥</div>
-                        <div class="notif-content">
-                            <strong>Nuevo seguidor</strong>
-                            <p>María G. comenzó a seguirte</p>
-                            <span class="notif-time">Hace 1 hora</span>
-                        </div>
-                    </div>
-                    <div class="notification-item">
-                        <div class="notif-icon" style="background: var(--gradient-cyan);">💬</div>
-                        <div class="notif-content">
-                            <strong>Nuevo comentario</strong>
-                            <p>Carlos comentó en "Brand Identity"</p>
-                            <span class="notif-time">Hace 3 horas</span>
-                        </div>
-                    </div>
-                    <div class="notification-item">
-                        <div class="notif-icon" style="background: var(--gradient-yellow);">🎨</div>
-                        <div class="notif-content">
-                            <strong>Plantilla popular</strong>
-                            <p>Tu diseño alcanzó 100 likes</p>
-                            <span class="notif-time">Ayer</span>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="view-all-notif">Ver todas las notificaciones →</a>
+                
+                <button class="btn-create-new">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Crear Nuevo</span>
+                </button>
             </div>
         </header>
 
-        <!-- Content Area -->
-        <div class="content-area">
-            <!-- Welcome Section -->
-            <section class="welcome-section">
-                <div class="welcome-text">
-                    <h1>¡Bienvenido de vuelta, Eros! ✨</h1>
-                    <p>¿Qué vas a crear hoy?</p>
+        <!-- Content Feed -->
+        <div class="content-feed">
+            <!-- Welcome Banner -->
+            <section class="welcome-banner">
+                <div class="welcome-content">
+                    <h1>¡Hola Eros! 👋</h1>
+                    <p>Encuentra la plantilla perfecta para tu próximo proyecto</p>
                 </div>
-                <div class="quick-actions">
-                    <button class="quick-btn primary">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" fill="currentColor"/>
-                        </svg>
-                        <span>Generar con IA</span>
-                    </button>
-                    <button class="quick-btn">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 5V15M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <span>Nuevo Diseño</span>
-                    </button>
-                    <button class="quick-btn">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <rect x="4" y="4" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M7 7H13M7 10H11M7 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        <span>Plantillas</span>
-                    </button>
-                </div>
-            </section>
-
-            <!-- Stats Cards -->
-            <section class="stats-grid">
-                <div class="stat-card card-pink">
-                    <div class="stat-icon">🎨</div>
-                    <div class="stat-content">
-                        <strong>24</strong>
-                        <span>Proyectos</span>
+                <div class="quick-stats">
+                    <div class="stat-pill">
+                        <span class="stat-value">24</span>
+                        <span class="stat-label">Proyectos</span>
                     </div>
-                    <div class="stat-chart">
-                        <div class="mini-chart">
-                            <div class="chart-bar" style="height: 60%"></div>
-                            <div class="chart-bar" style="height: 80%"></div>
-                            <div class="chart-bar" style="height: 40%"></div>
-                            <div class="chart-bar" style="height: 90%"></div>
-                            <div class="chart-bar" style="height: 70%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="stat-card card-purple">
-                    <div class="stat-icon">✨</div>
-                    <div class="stat-content">
-                        <strong>156</strong>
-                        <span>Generaciones IA</span>
-                    </div>
-                    <div class="stat-chart">
-                        <div class="mini-chart">
-                            <div class="chart-bar" style="height: 50%"></div>
-                            <div class="chart-bar" style="height: 70%"></div>
-                            <div class="chart-bar" style="height: 85%"></div>
-                            <div class="chart-bar" style="height: 65%"></div>
-                            <div class="chart-bar" style="height: 95%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="stat-card card-cyan">
-                    <div class="stat-icon">📂</div>
-                    <div class="stat-content">
-                        <strong>2.4 GB</strong>
-                        <span>Almacenamiento</span>
-                    </div>
-                    <div class="storage-bar">
-                        <div class="storage-fill" style="width: 48%"></div>
-                    </div>
-                </div>
-                <div class="stat-card card-yellow">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-content">
-                        <strong>1.2K</strong>
-                        <span>Seguidores</span>
-                    </div>
-                    <div class="follower-trend">+12% ↗</div>
-                </div>
-            </section>
-
-            <!-- Achievements Section -->
-            <section class="achievements-section">
-                <div class="section-header">
-                    <h2>Tus Logros 🏆</h2>
-                    <a href="#" class="view-all">Ver todos →</a>
-                </div>
-                <div class="achievements-scroll">
-                    <div class="achievement-card unlocked">
-                        <div class="achievement-icon">🎨</div>
-                        <h4>Primer Diseño</h4>
-                        <p>Creaste tu primer proyecto</p>
-                        <div class="achievement-date">12 Dic 2024</div>
-                    </div>
-                    <div class="achievement-card unlocked">
-                        <div class="achievement-icon">✨</div>
-                        <h4>Maestro IA</h4>
-                        <p>100 generaciones con IA</p>
-                        <div class="achievement-date">13 Dic 2024</div>
-                    </div>
-                    <div class="achievement-card unlocked">
-                        <div class="achievement-icon">🔥</div>
-                        <h4>Racha de 7 días</h4>
-                        <p>Creaste algo cada día</p>
-                        <div class="achievement-date">Hoy</div>
-                    </div>
-                    <div class="achievement-card locked">
-                        <div class="achievement-icon">👑</div>
-                        <h4>Leyenda Creativa</h4>
-                        <p>Crea 100 proyectos</p>
-                        <div class="achievement-progress">24/100</div>
-                    </div>
-                    <div class="achievement-card locked">
-                        <div class="achievement-icon">💎</div>
-                        <h4>Viral</h4>
-                        <p>Alcanza 10K likes</p>
-                        <div class="achievement-progress">892/10000</div>
+                    <div class="stat-pill">
+                        <span class="stat-value">1.2K</span>
+                        <span class="stat-label">Seguidores</span>
                     </div>
                 </div>
             </section>
 
-            <!-- Inspiration Section -->
-            <section class="inspiration-section">
-                <div class="inspiration-card">
-                    <div class="inspiration-content">
-                        <span class="inspiration-tag">💡 Inspiración del Día</span>
-                        <h3>"La creatividad es inteligencia divirtiéndose"</h3>
-                        <p>— Albert Einstein</p>
-                        <button class="inspiration-btn">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" fill="currentColor"/>
-                            </svg>
-                            Crear algo inspirado en esto
-                        </button>
-                    </div>
-                    <div class="inspiration-visual">
-                        <div class="floating-shape shape-1"></div>
-                        <div class="floating-shape shape-2"></div>
-                        <div class="floating-shape shape-3"></div>
-                    </div>
+            <!-- Filter Tabs -->
+            <section class="filter-section">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="for-you">✨ Para Ti</button>
+                    <button class="filter-tab" data-category="trending">🔥 Trending</button>
+                    <button class="filter-tab" data-category="popular">⭐ Más Usadas</button>
+                    <button class="filter-tab" data-category="creators">👤 Creadores</button>
+                    <button class="filter-tab" data-category="recent">🆕 Recientes</button>
                 </div>
-            </section>
-
-            <!-- Trending Templates -->
-            <section class="trending-section">
-                <div class="section-header">
-                    <div>
-                        <h2>🔥 Trending esta semana</h2>
-                        <p class="section-subtitle">Las plantillas más populares del momento</p>
-                    </div>
-                    <a href="#" class="view-all">Ver todos →</a>
-                </div>
-                <div class="trending-grid">
-                    <div class="trending-card">
-                        <div class="trending-thumb" style="background: var(--gradient-pink);">
-                            <div class="trending-badge">🔥 #1</div>
-                        </div>
-                        <div class="trending-info">
-                            <strong>Aesthetic Post</strong>
-                            <div class="trending-stats">
-                                <span>❤️ 2.4K</span>
-                                <span>👁️ 12K</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trending-card">
-                        <div class="trending-thumb" style="background: var(--gradient-purple);">
-                            <div class="trending-badge">🔥 #2</div>
-                        </div>
-                        <div class="trending-info">
-                            <strong>Story Template</strong>
-                            <div class="trending-stats">
-                                <span>❤️ 1.8K</span>
-                                <span>👁️ 9K</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trending-card">
-                        <div class="trending-thumb" style="background: var(--gradient-cyan);">
-                            <div class="trending-badge">🔥 #3</div>
-                        </div>
-                        <div class="trending-info">
-                            <strong>YouTube Banner</strong>
-                            <div class="trending-stats">
-                                <span>❤️ 1.5K</span>
-                                <span>👁️ 7K</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trending-card">
-                        <div class="trending-thumb" style="background: var(--gradient-yellow);">
-                            <div class="trending-badge">⭐ Nuevo</div>
-                        </div>
-                        <div class="trending-info">
-                            <strong>Presentation Deck</strong>
-                            <div class="trending-stats">
-                                <span>❤️ 980</span>
-                                <span>👁️ 4K</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Recent Projects -->
-            <section class="projects-section">
-                <div class="section-header">
-                    <h2>Proyectos Recientes</h2>
-                    <div class="section-controls">
-                        <!-- View Mode Toggle -->
-                        <div class="view-toggle">
-                            <button class="view-btn active" data-view="grid" title="Vista Grid">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                    <rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                    <rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                    <rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                </svg>
-                            </button>
-                            <button class="view-btn" data-view="list" title="Vista Lista">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M5 4H14M5 8H14M5 12H14M2 4H2.5M2 8H2.5M2 12H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <!-- Filter & Sort -->
-                        <div class="filter-group">
-                            <select class="filter-select" id="projectFilter">
-                                <option value="all">Todos</option>
-                                <option value="designs">Diseños</option>
-                                <option value="videos">Videos</option>
-                                <option value="presentations">Presentaciones</option>
-                            </select>
-                            <select class="filter-select" id="projectSort">
-                                <option value="recent">Más recientes</option>
-                                <option value="oldest">Más antiguos</option>
-                                <option value="name">Nombre A-Z</option>
-                                <option value="name-desc">Nombre Z-A</option>
-                            </select>
-                        </div>
-                        
-                        <a href="#" class="view-all">Ver todos →</a>
-                    </div>
-                </div>
-
-                <div class="projects-grid" id="projectsContainer">
-                    <div class="project-card">
-                        <div class="project-preview preview-1">
-                            <div class="project-overlay">
-                                <button class="preview-btn">Ver Proyecto</button>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Brand Identity Design</h3>
-                            <p>Editado hace 2 horas</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-preview preview-2">
-                            <div class="project-overlay">
-                                <button class="preview-btn">Ver Proyecto</button>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Instagram Stories Pack</h3>
-                            <p>Editado ayer</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-preview preview-3">
-                            <div class="project-overlay">
-                                <button class="preview-btn">Ver Proyecto</button>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>YouTube Thumbnail</h3>
-                            <p>Editado hace 3 días</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card new-project">
-                        <div class="project-preview new-preview">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 12V36M12 24H36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                            </svg>
-                            <span>Nuevo Proyecto</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Templates Section -->
-            <section class="templates-section">
-                <div class="section-header">
-                    <h2>Plantillas Populares</h2>
-                    <a href="#" class="view-all">Explorar →</a>
-                </div>
-
-                <div class="templates-scroll">
-                    <div class="template-card">
-                        <div class="template-thumb thumb-1"></div>
-                        <div class="template-info">
-                            <strong>Post Instagram</strong>
-                            <span>Social Media</span>
-                        </div>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-thumb thumb-2"></div>
-                        <div class="template-info">
-                            <strong>Story Aesthetic</strong>
-                            <span>Instagram</span>
-                        </div>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-thumb thumb-3"></div>
-                        <div class="template-info">
-                            <strong>Banner YouTube</strong>
-                            <span>Video</span>
-                        </div>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-thumb thumb-4"></div>
-                        <div class="template-info">
-                            <strong>Presentación</strong>
-                            <span>Business</span>
-                        </div>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-thumb thumb-5"></div>
-                        <div class="template-info">
-                            <strong>Flyer Event</strong>
-                            <span>Print</span>
-                        </div>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-thumb thumb-6"></div>
-                        <div class="template-info">
-                            <strong>Logo Design</strong>
-                            <span>Branding</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Collaborative Projects Section -->
-            <section class="collaborative-section">
-                <div class="section-header">
-                    <h2>Proyectos Colaborativos 👥</h2>
-                    <a href="#" class="view-all">Ver todos →</a>
-                </div>
-                <div class="collaborative-grid">
-                    <div class="collab-card">
-                        <div class="collab-preview" style="background: var(--gradient-pink);">
-                            <div class="collab-badge">En progreso</div>
-                        </div>
-                        <div class="collab-info">
-                            <h3>Campaña Social Media</h3>
-                            <p>Con el equipo de Marketing</p>
-                            <div class="collab-members">
-                                <div class="member-avatar" style="background: var(--gradient-purple);">M</div>
-                                <div class="member-avatar" style="background: var(--gradient-cyan);">A</div>
-                                <div class="member-avatar" style="background: var(--gradient-yellow);">L</div>
-                                <div class="member-more">+2</div>
-                            </div>
-                            <div class="collab-progress">
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 65%"></div>
-                                </div>
-                                <span class="progress-text">65% completado</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="collab-card">
-                        <div class="collab-preview" style="background: var(--gradient-purple);">
-                            <div class="collab-badge">Revisión</div>
-                        </div>
-                        <div class="collab-info">
-                            <h3>Branding Startup Tech</h3>
-                            <p>Proyecto con cliente</p>
-                            <div class="collab-members">
-                                <div class="member-avatar" style="background: var(--gradient-pink);">J</div>
-                                <div class="member-avatar" style="background: var(--gradient-cyan);">S</div>
-                            </div>
-                            <div class="collab-progress">
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                                <span class="progress-text">90% completado</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="collab-card new-collab">
-                        <div class="new-collab-content">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
-                                <path d="M24 14V34M14 24H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <span>Invitar a colaborar</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Collections Section -->
-            <section class="collections-section">
-                <div class="section-header">
-                    <div>
-                        <h2>Tus Colecciones 📌</h2>
-                        <p class="section-subtitle">Organiza tus ideas estilo Pinterest</p>
-                    </div>
-                    <button class="create-collection-btn">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        Nueva Colección
-                    </button>
-                </div>
-                <div class="collections-grid">
-                    <div class="collection-card">
-                        <div class="collection-preview">
-                            <div class="preview-grid">
-                                <div class="preview-item" style="background: var(--gradient-pink);"></div>
-                                <div class="preview-item" style="background: var(--gradient-purple);"></div>
-                                <div class="preview-item" style="background: var(--gradient-cyan);"></div>
-                                <div class="preview-item" style="background: var(--gradient-yellow);"></div>
-                            </div>
-                        </div>
-                        <div class="collection-info">
-                            <h3>Inspiración Minimalista</h3>
-                            <p>24 elementos • Privado</p>
-                        </div>
-                    </div>
-
-                    <div class="collection-card">
-                        <div class="collection-preview">
-                            <div class="preview-grid">
-                                <div class="preview-item" style="background: var(--gradient-cyan);"></div>
-                                <div class="preview-item" style="background: var(--gradient-pink);"></div>
-                                <div class="preview-item" style="background: var(--gradient-purple);"></div>
-                                <div class="preview-item" style="background: var(--gradient-yellow);"></div>
-                            </div>
-                        </div>
-                        <div class="collection-info">
-                            <h3>Colores Vibrantes</h3>
-                            <p>18 elementos • Público</p>
-                        </div>
-                    </div>
-
-                    <div class="collection-card">
-                        <div class="collection-preview">
-                            <div class="preview-grid">
-                                <div class="preview-item" style="background: var(--gradient-purple);"></div>
-                                <div class="preview-item" style="background: var(--gradient-yellow);"></div>
-                                <div class="preview-item" style="background: var(--gradient-pink);"></div>
-                                <div class="preview-item" style="background: var(--gradient-cyan);"></div>
-                            </div>
-                        </div>
-                        <div class="collection-info">
-                            <h3>Tipografías Cool</h3>
-                            <p>32 elementos • Privado</p>
-                        </div>
-                    </div>
-
-                    <div class="collection-card">
-                        <div class="collection-preview">
-                            <div class="preview-grid">
-                                <div class="preview-item" style="background: var(--gradient-yellow);"></div>
-                                <div class="preview-item" style="background: var(--gradient-cyan);"></div>
-                                <div class="preview-item" style="background: var(--gradient-pink);"></div>
-                                <div class="preview-item" style="background: var(--gradient-purple);"></div>
-                            </div>
-                        </div>
-                        <div class="collection-info">
-                            <h3>Ideas para Clientes</h3>
-                            <p>45 elementos • Público</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Activity Feed Section -->
-            <section class="activity-feed-section">
-                <div class="section-header">
-                    <h2>Actividad Reciente 🔔</h2>
-                    <div class="activity-filters">
-                        <button class="filter-chip active">Todo</button>
-                        <button class="filter-chip">Siguiendo</button>
-                        <button class="filter-chip">Menciones</button>
-                    </div>
-                </div>
-                <div class="activity-feed">
-                    <div class="activity-item">
-                        <div class="activity-avatar" style="background: var(--gradient-pink);">M</div>
-                        <div class="activity-content">
-                            <p><strong>María G.</strong> le dio like a tu proyecto <span class="activity-link">"Brand Identity Design"</span></p>
-                            <span class="activity-time">Hace 5 minutos</span>
-                        </div>
-                        <div class="activity-thumbnail" style="background: var(--gradient-pink);"></div>
-                    </div>
-
-                    <div class="activity-item">
-                        <div class="activity-avatar" style="background: var(--gradient-purple);">C</div>
-                        <div class="activity-content">
-                            <p><strong>Carlos R.</strong> comentó: "¡Increíble trabajo! 🔥"</p>
-                            <span class="activity-time">Hace 1 hora</span>
-                        </div>
-                    </div>
-
-                    <div class="activity-item">
-                        <div class="activity-avatar" style="background: var(--gradient-cyan);">A</div>
-                        <div class="activity-content">
-                            <p><strong>Ana M.</strong> compartió tu plantilla <span class="activity-link">"Instagram Stories Pack"</span></p>
-                            <span class="activity-time">Hace 2 horas</span>
-                        </div>
-                        <div class="activity-thumbnail" style="background: var(--gradient-purple);"></div>
-                    </div>
-
-                    <div class="activity-item">
-                        <div class="activity-avatar" style="background: var(--gradient-yellow);">L</div>
-                        <div class="activity-content">
-                            <p><strong>Luis T.</strong> comenzó a seguirte</p>
-                            <span class="activity-time">Hace 3 horas</span>
-                        </div>
-                        <button class="follow-back-btn">Seguir</button>
-                    </div>
-
-                    <div class="activity-item">
-                        <div class="activity-avatar" style="background: var(--gradient-pink);">S</div>
-                        <div class="activity-content">
-                            <p><strong>Sofía P.</strong> guardó tu diseño en su colección</p>
-                            <span class="activity-time">Ayer</span>
-                        </div>
-                    </div>
-                </div>
-                <button class="load-more-btn">Cargar más actividad</button>
-            </section>
-
-            <!-- AI Recommendations Section -->
-            <section class="recommendations-section">
-                <div class="section-header">
-                    <div>
-                        <h2>Recomendaciones IA ✨</h2>
-                        <p class="section-subtitle">Basado en tus proyectos y gustos</p>
-                    </div>
-                    <button class="refresh-recommendations">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C9.84837 2 11.5 2.82338 12.6 4.1M12.6 2V4.1M12.6 4.1H10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Actualizar
-                    </button>
-                </div>
-                <div class="recommendations-carousel">
-                    <div class="recommendation-card">
-                        <div class="rec-badge">Para ti</div>
-                        <div class="rec-preview" style="background: var(--gradient-pink);"></div>
-                        <div class="rec-info">
-                            <h4>Aesthetic Posts Pack</h4>
-                            <p>Similar a tus diseños minimalistas</p>
-                            <div class="rec-stats">
-                                <span>⭐ 4.9</span>
-                                <span>1.2K usos</span>
-                            </div>
-                        </div>
-                        <button class="use-template-btn">Usar Template</button>
-                    </div>
-
-                    <div class="recommendation-card">
-                        <div class="rec-badge">Trending</div>
-                        <div class="rec-preview" style="background: var(--gradient-purple);"></div>
-                        <div class="rec-info">
-                            <h4>Story Templates Pro</h4>
-                            <p>Perfecto para tu estilo</p>
-                            <div class="rec-stats">
-                                <span>⭐ 5.0</span>
-                                <span>890 usos</span>
-                            </div>
-                        </div>
-                        <button class="use-template-btn">Usar Template</button>
-                    </div>
-
-                    <div class="recommendation-card">
-                        <div class="rec-badge">Nuevo</div>
-                        <div class="rec-preview" style="background: var(--gradient-cyan);"></div>
-                        <div class="rec-info">
-                            <h4>Video Intros Pack</h4>
-                            <p>Basado en tus videos recientes</p>
-                            <div class="rec-stats">
-                                <span>⭐ 4.8</span>
-                                <span>2.1K usos</span>
-                            </div>
-                        </div>
-                        <button class="use-template-btn">Usar Template</button>
-                    </div>
-
-                    <div class="recommendation-card">
-                        <div class="rec-badge">Popular</div>
-                        <div class="rec-preview" style="background: var(--gradient-yellow);"></div>
-                        <div class="rec-info">
-                            <h4>Branding Kit</h4>
-                            <p>Complementa tus proyectos</p>
-                            <div class="rec-stats">
-                                <span>⭐ 4.9</span>
-                                <span>1.5K usos</span>
-                            </div>
-                        </div>
-                        <button class="use-template-btn">Usar Template</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Analytics Dashboard -->
-            <section class="analytics-section">
-                <div class="section-header">
-                    <h2>Analytics Dashboard 📊</h2>
-                    <select class="time-filter">
-                        <option>Últimos 7 días</option>
-                        <option>Últimos 30 días</option>
-                        <option>Este mes</option>
-                        <option>Todo el tiempo</option>
+                <div class="filter-sort">
+                    <select class="sort-select">
+                        <option>Más relevantes</option>
+                        <option>Más recientes</option>
+                        <option>Más populares</option>
+                        <option>Mejor valoradas</option>
                     </select>
                 </div>
-                <div class="analytics-grid">
-                    <div class="analytics-card">
-                        <div class="analytics-header">
-                            <h4>Total de Vistas</h4>
-                            <span class="analytics-trend up">+24%</span>
-                        </div>
-                        <div class="analytics-value">12.4K</div>
-                        <div class="analytics-chart">
-                            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <polyline points="0,25 20,20 40,22 60,15 80,18 100,10" 
-                                    fill="none" 
-                                    stroke="url(#gradient1)" 
-                                    stroke-width="2"/>
-                                <defs>
-                                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stop-color="#FFB4D1"/>
-                                        <stop offset="100%" stop-color="#D4BBFF"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="analytics-card">
-                        <div class="analytics-header">
-                            <h4>Likes Recibidos</h4>
-                            <span class="analytics-trend up">+18%</span>
-                        </div>
-                        <div class="analytics-value">3.2K</div>
-                        <div class="analytics-chart">
-                            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <polyline points="0,20 20,18 40,25 60,12 80,15 100,8" 
-                                    fill="none" 
-                                    stroke="url(#gradient2)" 
-                                    stroke-width="2"/>
-                                <defs>
-                                    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stop-color="#D4BBFF"/>
-                                        <stop offset="100%" stop-color="#A8E6FF"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="analytics-card">
-                        <div class="analytics-header">
-                            <h4>Compartidos</h4>
-                            <span class="analytics-trend up">+32%</span>
-                        </div>
-                        <div class="analytics-value">892</div>
-                        <div class="analytics-chart">
-                            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <polyline points="0,22 20,24 40,18 60,20 80,12 100,15" 
-                                    fill="none" 
-                                    stroke="url(#gradient3)" 
-                                    stroke-width="2"/>
-                                <defs>
-                                    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stop-color="#A8E6FF"/>
-                                        <stop offset="100%" stop-color="#FFE89C"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="analytics-card">
-                        <div class="analytics-header">
-                            <h4>Nuevos Seguidores</h4>
-                            <span class="analytics-trend up">+12%</span>
-                        </div>
-                        <div class="analytics-value">+156</div>
-                        <div class="analytics-chart">
-                            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <polyline points="0,28 20,25 40,20 60,22 80,18 100,12" 
-                                    fill="none" 
-                                    stroke="url(#gradient4)" 
-                                    stroke-width="2"/>
-                                <defs>
-                                    <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stop-color="#FFE89C"/>
-                                        <stop offset="100%" stop-color="#FFCAB0"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="top-projects">
-                    <h4>Proyectos Más Vistos</h4>
-                    <div class="top-projects-list">
-                        <div class="top-project-item">
-                            <div class="rank-badge">#1</div>
-                            <div class="project-mini-thumb" style="background: var(--gradient-pink);"></div>
-                            <div class="project-mini-info">
-                                <strong>Brand Identity Design</strong>
-                                <span>2.4K vistas</span>
-                            </div>
-                            <div class="engagement-bar">
-                                <div class="engagement-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <div class="top-project-item">
-                            <div class="rank-badge">#2</div>
-                            <div class="project-mini-thumb" style="background: var(--gradient-purple);"></div>
-                            <div class="project-mini-info">
-                                <strong>Instagram Stories Pack</strong>
-                                <span>1.8K vistas</span>
-                            </div>
-                            <div class="engagement-bar">
-                                <div class="engagement-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
-
-                        <div class="top-project-item">
-                            <div class="rank-badge">#3</div>
-                            <div class="project-mini-thumb" style="background: var(--gradient-cyan);"></div>
-                            <div class="project-mini-info">
-                                <strong>YouTube Thumbnail</strong>
-                                <span>1.2K vistas</span>
-                            </div>
-                            <div class="engagement-bar">
-                                <div class="engagement-fill" style="width: 55%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
 
-            <!-- Mood Board Section -->
-            <section class="moodboard-section">
-                <div class="section-header">
-                    <h2>Mood Board 🎨</h2>
-                    <div class="moodboard-actions">
-                        <button class="moodboard-btn">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            Agregar
-                        </button>
-                        <button class="moodboard-btn">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                <rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                <rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                <rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                            Vista
-                        </button>
+            <!-- Templates Feed -->
+            <div id="templatesFeed">
+                <!-- For You Section -->
+                <section class="templates-category" data-category="for-you">
+                    <div class="category-header">
+                        <h2>✨ Diseñadas para Ti</h2>
+                        <p>Basado en tu actividad y gustos</p>
                     </div>
-                </div>
-                <div class="moodboard-masonry" id="moodboard">
-                    <div class="mood-item large" style="background: var(--gradient-pink);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                    <div class="templates-masonry">
+                        <!-- Templates will be loaded here -->
                     </div>
-                    <div class="mood-item" style="background: var(--gradient-purple);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                </section>
+
+                <!-- Trending Section -->
+                <section class="templates-category hidden" data-category="trending">
+                    <div class="category-header">
+                        <h2>🔥 Trending Esta Semana</h2>
+                        <p>Las plantillas más populares del momento</p>
                     </div>
-                    <div class="mood-item tall" style="background: var(--gradient-cyan);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                    <div class="templates-masonry">
+                        <!-- Templates will be loaded here -->
                     </div>
-                    <div class="mood-item" style="background: var(--gradient-yellow);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                </section>
+
+                <!-- Most Used Section -->
+                <section class="templates-category hidden" data-category="popular">
+                    <div class="category-header">
+                        <h2>⭐ Plantillas Más Usadas</h2>
+                        <p>Las favoritas de la comunidad</p>
                     </div>
-                    <div class="mood-item wide" style="background: var(--gradient-pink);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                    <div class="templates-masonry">
+                        <!-- Templates will be loaded here -->
                     </div>
-                    <div class="mood-item" style="background: var(--gradient-purple);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                </section>
+
+                <!-- Creators Section -->
+                <section class="templates-category hidden" data-category="creators">
+                    <div class="category-header">
+                        <h2>👤 Creadores Destacados</h2>
+                        <p>Diseños de creadores de plantillas profesionales</p>
                     </div>
-                    <div class="mood-item" style="background: var(--gradient-cyan);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                    <div class="creators-grid">
+                        <!-- Creator cards will be loaded here -->
                     </div>
-                    <div class="mood-item large" style="background: var(--gradient-yellow);" draggable="true">
-                        <div class="mood-overlay">
-                            <button class="mood-action">❤️</button>
-                            <button class="mood-action">📌</button>
-                        </div>
+                </section>
+
+                <!-- Recent Section -->
+                <section class="templates-category hidden" data-category="recent">
+                    <div class="category-header">
+                        <h2>🆕 Plantillas Recientes</h2>
+                        <p>Lo último que se ha subido</p>
                     </div>
-                </div>
-            </section>
+                    <div class="templates-masonry">
+                        <!-- Templates will be loaded here -->
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
-    <!-- Mobile Hamburger Button -->
+    <!-- Mobile Menu Button -->
     <button class="mobile-menu-btn" id="mobileMenuBtn">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="hamburger-icon">
             <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1084,95 +276,16 @@
         </svg>
     </button>
 
-    <!-- Mobile Bottom Navigation -->
-    <nav class="bottom-nav">
-        <a href="#" class="bottom-nav-item active">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="11" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="3" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-            <span>Inicio</span>
-        </a>
-        <a href="#" class="bottom-nav-item">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-            <span>IA</span>
-        </a>
-        <a href="#" class="bottom-nav-item create-btn">
-            <div class="create-icon">
+    <!-- Template Detail Modal -->
+    <div class="modal-overlay" id="templateModal">
+        <div class="modal-content template-modal">
+            <button class="modal-close" id="closeTemplateModal">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-            </div>
-        </a>
-        <a href="#" class="bottom-nav-item">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <rect x="4" y="4" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="11" y="4" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="4" y="11" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="11" y="11" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-            <span>Plantillas</span>
-        </a>
-        <a href="#" class="bottom-nav-item">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M3 17C3 14.2386 5.23858 12 8 12H12C14.7614 12 17 14.2386 17 17" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-            <span>Perfil</span>
-        </a>
-    </nav>
-
-    <!-- New Project Modal -->
-    <div class="modal-overlay" id="newProjectModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Crear Nuevo Proyecto</h2>
-                <button class="modal-close" id="closeModal">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="project-types">
-                    <div class="project-type-card">
-                        <div class="type-icon" style="background: var(--gradient-pink);">🎨</div>
-                        <h3>Diseño Gráfico</h3>
-                        <p>Posts, stories, banners</p>
-                    </div>
-                    <div class="project-type-card">
-                        <div class="type-icon" style="background: var(--gradient-purple);">✨</div>
-                        <h3>Generar con IA</h3>
-                        <p>Imágenes únicas con IA</p>
-                    </div>
-                    <div class="project-type-card">
-                        <div class="type-icon" style="background: var(--gradient-cyan);">🎬</div>
-                        <h3>Video</h3>
-                        <p>Edita videos y reels</p>
-                    </div>
-                    <div class="project-type-card">
-                        <div class="type-icon" style="background: var(--gradient-yellow);">📊</div>
-                        <h3>Presentación</h3>
-                        <p>Slides profesionales</p>
-                    </div>
-                </div>
-                
-                <div class="quick-sizes">
-                    <h4>Tamaños rápidos</h4>
-                    <div class="sizes-grid">
-                        <button class="size-btn">Instagram Post<span>1080x1080</span></button>
-                        <button class="size-btn">Story<span>1080x1920</span></button>
-                        <button class="size-btn">YouTube Thumbnail<span>1280x720</span></button>
-                        <button class="size-btn">Facebook Cover<span>820x312</span></button>
-                        <button class="size-btn">Logo<span>500x500</span></button>
-                        <button class="size-btn">Personalizado<span>Elige tu tamaño</span></button>
-                    </div>
-                </div>
+            </button>
+            <div class="template-detail" id="templateDetail">
+                <!-- Template details will be loaded here -->
             </div>
         </div>
     </div>
