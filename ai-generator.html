@@ -123,85 +123,154 @@
             <!-- Left Panel -->
             <section class="input-panel">
                 <div class="prompt-section">
-                    <label for="promptInput">Describe tu imagen</label>
+                    <label for="promptInput">¿Qué quieres crear?</label>
                     <textarea 
                         id="promptInput" 
-                        placeholder="Ej: Un gatito con gafas de sol en una playa al atardecer, estilo anime, colores pastel..."
-                        rows="6"
+                        placeholder="Describe qué plantilla, post o contenido quieres crear..."
+                        rows="8"
                     ></textarea>
                     
-                    <div class="prompt-suggestions">
-                        <button class="suggestion-chip">🌸 Aesthetic pastel</button>
-                        <button class="suggestion-chip">🎨 Arte digital</button>
-                        <button class="suggestion-chip">📸 Fotorrealista</button>
+                    <div class="examples-section">
+                        <p class="examples-title">💡 Ejemplos de lo que puedes crear:</p>
+                        <div class="examples-grid">
+                            <button class="example-chip">5 posts de Instagram sobre recetas veganas, estilo pastel</button>
+                            <button class="example-chip">8 slides de presentación sobre marketing digital</button>
+                            <button class="example-chip">3 flyers para promocionar mi café, estilo moderno</button>
+                            <button class="example-chip">10 stories de Instagram para tips de productividad</button>
+                            <button class="example-chip">Plantilla de CV profesional minimalista</button>
+                            <button class="example-chip">Banner de YouTube para canal de gaming</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="options-section">
-                    <h3>Estilo</h3>
-                    <div class="style-grid">
-                        <button class="style-card active">
-                            <div class="style-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                            <span>Realista</span>
-                        </button>
-                        <button class="style-card">
-                            <div class="style-preview" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                            <span>Anime</span>
-                        </button>
-                        <button class="style-card">
-                            <div class="style-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                            <span>3D Render</span>
-                        </button>
-                        <button class="style-card">
-                            <div class="style-preview" style="background: linear-gradient(135deg, #FFB4D1 0%, #D4BBFF 100%);"></div>
-                            <span>Pastel</span>
-                        </button>
-                    </div>
-
-                    <h3>Configuración</h3>
-                    <div class="config-options">
-                        <div class="option-group">
-                            <label>Tamaño</label>
-                            <select>
-                                <option>512 x 512</option>
-                                <option selected>1024 x 1024</option>
-                            </select>
+                <div class="quick-options">
+                    <h3>Opciones Rápidas</h3>
+                    <div class="options-grid">
+                        <div class="option-card">
+                            <div class="option-icon">📱</div>
+                            <span>Posts Redes</span>
                         </div>
-
-                        <div class="option-group">
-                            <label>Cantidad</label>
-                            <select>
-                                <option selected>1 imagen</option>
-                                <option>2 imágenes</option>
-                                <option>4 imágenes</option>
-                            </select>
+                        <div class="option-card">
+                            <div class="option-icon">📊</div>
+                            <span>Presentaciones</span>
+                        </div>
+                        <div class="option-card">
+                            <div class="option-icon">📄</div>
+                            <span>Documentos</span>
+                        </div>
+                        <div class="option-card">
+                            <div class="option-icon">🎨</div>
+                            <span>Flyers</span>
+                        </div>
+                        <div class="option-card">
+                            <div class="option-icon">🎬</div>
+                            <span>Stories</span>
+                        </div>
+                        <div class="option-card">
+                            <div class="option-icon">🌐</div>
+                            <span>Banners Web</span>
                         </div>
                     </div>
+                </div>
 
-                    <button class="btn-generate" id="generateBtn">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" fill="currentColor"/>
+                <div class="advanced-settings">
+                    <button class="toggle-advanced" id="toggleAdvanced">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
-                        <span>Generar Imagen</span>
+                        <span>Opciones Avanzadas</span>
                     </button>
+                    
+                    <div class="advanced-content" id="advancedContent" style="display: none;">
+                        <div class="option-group">
+                            <label>Estilo Visual</label>
+                            <select id="styleSelect">
+                                <option value="auto">Automático (IA decide)</option>
+                                <option value="minimal">Minimalista</option>
+                                <option value="modern">Moderno</option>
+                                <option value="elegant">Elegante</option>
+                                <option value="playful">Divertido</option>
+                                <option value="professional">Profesional</option>
+                                <option value="pastel">Pastel Aesthetic</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Paleta de Colores</label>
+                            <select id="colorSelect">
+                                <option value="auto">Automático</option>
+                                <option value="pastel">Colores Pastel</option>
+                                <option value="vibrant">Colores Vibrantes</option>
+                                <option value="monochrome">Monocromático</option>
+                                <option value="dark">Modo Oscuro</option>
+                                <option value="custom">Personalizado</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Idioma del Contenido</label>
+                            <select id="languageSelect">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-generate" id="generateBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" fill="currentColor"/>
+                    </svg>
+                    <span>Generar con IA</span>
+                </button>
+                
+                <div class="generation-info">
+                    <p>💡 La IA creará el diseño, contenido y variaciones según tu descripción</p>
                 </div>
             </section>
 
             <!-- Right Panel -->
             <section class="results-panel">
-                <h2>Resultados</h2>
+                <div class="results-header">
+                    <h2>Resultados Generados</h2>
+                    <div class="results-actions">
+                        <button class="btn-view-mode" title="Cambiar vista">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                        <button class="btn-clear-results" id="clearResults">Limpiar Todo</button>
+                    </div>
+                </div>
 
                 <div class="results-grid" id="resultsGrid">
                     <div class="empty-state">
                         <div class="empty-icon">✨</div>
-                        <h3>Sin imágenes generadas</h3>
-                        <p>Describe tu idea y presiona "Generar"</p>
+                        <h3>Aún no has generado nada</h3>
+                        <p>Describe qué plantilla o contenido necesitas y la IA lo creará para ti</p>
+                        <div class="empty-examples">
+                            <strong>Prueba con:</strong>
+                            <ul>
+                                <li>"Crea 5 posts de Instagram sobre café"</li>
+                                <li>"Genera una presentación de 10 slides sobre IA"</li>
+                                <li>"Diseña 3 flyers para un evento de música"</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <div class="history-section">
-                    <h3>Historial</h3>
-                    <div class="history-list" id="historyList"></div>
+                    <h3>📜 Historial de Generaciones</h3>
+                    <div class="history-list" id="historyList">
+                        <div class="history-empty">
+                            <p>Tus generaciones recientes aparecerán aquí</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
