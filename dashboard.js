@@ -529,3 +529,165 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ========================
+// FASE 1: NUEVAS FUNCIONALIDADES
+// ========================
+
+// Collaborative Projects
+document.querySelectorAll('.collab-card:not(.new-collab)').forEach(card => {
+    card.addEventListener('click', () => {
+        const projectName = card.querySelector('h3')?.textContent;
+        console.log('Opening collaborative project:', projectName);
+        // TODO: Open collaboration view
+    });
+});
+
+document.querySelector('.new-collab')?.addEventListener('click', () => {
+    console.log('Creating new collaboration');
+    // TODO: Show invite collaboration modal
+});
+
+// Collections
+document.querySelectorAll('.collection-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const collectionName = card.querySelector('h3')?.textContent;
+        console.log('Opening collection:', collectionName);
+        // TODO: Open collection board
+    });
+});
+
+document.querySelector('.create-collection-btn')?.addEventListener('click', () => {
+    console.log('Creating new collection');
+    // TODO: Show create collection modal
+});
+
+// Activity Feed Filters
+document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const filter = chip.textContent;
+        console.log('Filter activity by:', filter);
+        // TODO: Filter activity feed
+    });
+});
+
+// Activity Items
+document.querySelectorAll('.activity-item').forEach(item => {
+    item.addEventListener('click', () => {
+        console.log('Activity clicked');
+        // TODO: Navigate to project/profile
+    });
+});
+
+document.querySelectorAll('.follow-back-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.textContent = 'Siguiendo';
+        btn.style.background = 'rgba(255, 255, 255, 0.1)';
+        console.log('Following user');
+    });
+});
+
+document.querySelector('.load-more-btn')?.addEventListener('click', () => {
+    console.log('Loading more activity');
+    // TODO: Load more activity items
+});
+
+// AI Recommendations
+document.querySelector('.refresh-recommendations')?.addEventListener('click', function() {
+    this.style.transform = 'rotate(360deg)';
+    setTimeout(() => {
+        this.style.transform = '';
+    }, 600);
+    console.log('Refreshing recommendations');
+    // TODO: Load new recommendations
+});
+
+document.querySelectorAll('.recommendation-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const templateName = card.querySelector('h4')?.textContent;
+        console.log('Viewing recommendation:', templateName);
+    });
+});
+
+document.querySelectorAll('.use-template-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const templateName = btn.closest('.recommendation-card').querySelector('h4')?.textContent;
+        console.log('Using template:', templateName);
+        // TODO: Open template in editor
+    });
+});
+
+// Analytics
+document.querySelector('.time-filter')?.addEventListener('change', (e) => {
+    console.log('Analytics timeframe:', e.target.value);
+    // TODO: Update analytics data
+});
+
+document.querySelectorAll('.analytics-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const metric = card.querySelector('h4')?.textContent;
+        console.log('View detailed analytics for:', metric);
+        // TODO: Show detailed analytics modal
+    });
+});
+
+// Mood Board - Drag and Drop
+let draggedElement = null;
+
+document.querySelectorAll('.mood-item').forEach(item => {
+    item.addEventListener('dragstart', function(e) {
+        draggedElement = this;
+        this.style.opacity = '0.5';
+    });
+    
+    item.addEventListener('dragend', function(e) {
+        this.style.opacity = '';
+    });
+    
+    item.addEventListener('dragover', function(e) {
+        e.preventDefault();
+    });
+    
+    item.addEventListener('drop', function(e) {
+        e.preventDefault();
+        if (draggedElement !== this) {
+            // Swap positions
+            const temp = this.style.cssText;
+            this.style.cssText = draggedElement.style.cssText;
+            draggedElement.style.cssText = temp;
+        }
+    });
+});
+
+// Mood Board Actions
+document.querySelectorAll('.mood-action').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const action = btn.textContent;
+        console.log('Mood board action:', action);
+        
+        if (action === '❤️') {
+            btn.textContent = '💙';
+            setTimeout(() => btn.textContent = '❤️', 1000);
+        }
+    });
+});
+
+document.querySelectorAll('.moodboard-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const action = btn.textContent.trim();
+        if (action.includes('Agregar')) {
+            console.log('Add to mood board');
+            // TODO: Show file picker
+        } else {
+            console.log('Toggle mood board view');
+            // TODO: Toggle grid/masonry view
+        }
+    });
+});
+
+console.log('✨ Fase 1 features loaded!');
