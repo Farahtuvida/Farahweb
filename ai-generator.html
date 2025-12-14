@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar con IA - CreAIve</title>
+    <link rel="stylesheet" href="ai-generator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-circle">
+                    <span class="logo-sparkle">✦</span>
+                </div>
+                <span class="logo-text">Cre<span class="ai">AI</span>ve</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="11" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="3" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Inicio</span>
+            </a>
+
+            <a href="ai-generator.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Generar con IA</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="5" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M7 3V5M13 3V5M3 9H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>Mis Proyectos</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="4" y="4" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="11" y="4" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="4" y="11" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="11" y="11" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Plantillas</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M3 17C3 14.2386 5.23858 12 8 12H12C14.7614 12 17 14.2386 17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>Comunidad</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M10 7V10L12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>Recientes</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 3L11.5 8.5L17 10L11.5 11.5L10 17L8.5 11.5L3 10L8.5 8.5L10 3Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Favoritos</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">E</div>
+                <div class="user-info">
+                    <strong>Eros User</strong>
+                    <span>Plan Free</span>
+                </div>
+            </div>
+            
+            <button class="upgrade-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" fill="currentColor"/>
+                </svg>
+                Upgrade
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="page-title">
+                <h1>✨ Generar con IA</h1>
+                <p>Crea imágenes únicas con inteligencia artificial</p>
+            </div>
+
+            <div class="credits-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2L10 6L14 7L10 8L8 12L6 8L2 7L6 6L8 2Z" fill="currentColor"/>
+                </svg>
+                <span>15 créditos</span>
+            </div>
+        </header>
+
+        <!-- Generator Area -->
+        <div class="generator-container">
+            <!-- Left Panel -->
+            <section class="input-panel">
+                <div class="prompt-section">
+                    <label for="promptInput">Describe tu imagen</label>
+                    <textarea 
+                        id="promptInput" 
+                        placeholder="Ej: Un gatito con gafas de sol en una playa al atardecer, estilo anime, colores pastel..."
+                        rows="6"
+                    ></textarea>
+                    
+                    <div class="prompt-suggestions">
+                        <button class="suggestion-chip">🌸 Aesthetic pastel</button>
+                        <button class="suggestion-chip">🎨 Arte digital</button>
+                        <button class="suggestion-chip">📸 Fotorrealista</button>
+                    </div>
+                </div>
+
+                <div class="options-section">
+                    <h3>Estilo</h3>
+                    <div class="style-grid">
+                        <button class="style-card active">
+                            <div class="style-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <span>Realista</span>
+                        </button>
+                        <button class="style-card">
+                            <div class="style-preview" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <span>Anime</span>
+                        </button>
+                        <button class="style-card">
+                            <div class="style-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <span>3D Render</span>
+                        </button>
+                        <button class="style-card">
+                            <div class="style-preview" style="background: linear-gradient(135deg, #FFB4D1 0%, #D4BBFF 100%);"></div>
+                            <span>Pastel</span>
+                        </button>
+                    </div>
+
+                    <h3>Configuración</h3>
+                    <div class="config-options">
+                        <div class="option-group">
+                            <label>Tamaño</label>
+                            <select>
+                                <option>512 x 512</option>
+                                <option selected>1024 x 1024</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Cantidad</label>
+                            <select>
+                                <option selected>1 imagen</option>
+                                <option>2 imágenes</option>
+                                <option>4 imágenes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn-generate" id="generateBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3L13 9L19 10L14.5 14.5L15.5 20.5L10 17L4.5 20.5L5.5 14.5L1 10L7 9L10 3Z" fill="currentColor"/>
+                        </svg>
+                        <span>Generar Imagen</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Right Panel -->
+            <section class="results-panel">
+                <h2>Resultados</h2>
+
+                <div class="results-grid" id="resultsGrid">
+                    <div class="empty-state">
+                        <div class="empty-icon">✨</div>
+                        <h3>Sin imágenes generadas</h3>
+                        <p>Describe tu idea y presiona "Generar"</p>
+                    </div>
+                </div>
+
+                <div class="history-section">
+                    <h3>Historial</h3>
+                    <div class="history-list" id="historyList"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Generando...</h3>
+        </div>
+    </div>
+
+    <script src="ai-generator.js"></script>
+</body>
+</html>
